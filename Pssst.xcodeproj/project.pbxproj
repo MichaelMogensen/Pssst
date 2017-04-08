@@ -15,6 +15,9 @@
 		8DEE79231E97C5820010A81D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DEE79211E97C5820010A81D /* Main.storyboard */; };
 		8DEE79251E97C5820010A81D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DEE79241E97C5820010A81D /* Assets.xcassets */; };
 		8DEE79281E97C5820010A81D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DEE79261E97C5820010A81D /* LaunchScreen.storyboard */; };
+		8DEE79361E99079C0010A81D /* LaneLim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE79351E99079C0010A81D /* LaneLim.swift */; };
+		8DEE79391E9908980010A81D /* GameEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE79381E9908980010A81D /* GameEnums.swift */; };
+		8DEE793B1E9908D40010A81D /* RandomNumbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE793A1E9908D40010A81D /* RandomNumbers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		8DEE79241E97C5820010A81D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8DEE79271E97C5820010A81D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8DEE79291E97C5820010A81D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DEE79351E99079C0010A81D /* LaneLim.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaneLim.swift; sourceTree = "<group>"; };
+		8DEE79381E9908980010A81D /* GameEnums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameEnums.swift; sourceTree = "<group>"; };
+		8DEE793A1E9908D40010A81D /* RandomNumbers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RandomNumbers.swift; path = Utils/RandomNumbers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,10 @@
 		8DEE79161E97C5820010A81D /* Pssst */ = {
 			isa = PBXGroup;
 			children = (
+				8DEE79371E9908980010A81D /* Enums */,
+				8DEE79341E99079C0010A81D /* Models */,
+				8DEE79311E9905440010A81D /* Game */,
+				8DEE79301E9904FF0010A81D /* Utils */,
 				8DEE79171E97C5820010A81D /* AppDelegate.swift */,
 				8DEE79191E97C5820010A81D /* GameScene.sks */,
 				8DEE791B1E97C5820010A81D /* Actions.sks */,
@@ -71,6 +81,37 @@
 				8DEE79291E97C5820010A81D /* Info.plist */,
 			);
 			path = Pssst;
+			sourceTree = "<group>";
+		};
+		8DEE79301E9904FF0010A81D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8DEE793A1E9908D40010A81D /* RandomNumbers.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		8DEE79311E9905440010A81D /* Game */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Game;
+			sourceTree = "<group>";
+		};
+		8DEE79341E99079C0010A81D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8DEE79351E99079C0010A81D /* LaneLim.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8DEE79371E9908980010A81D /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				8DEE79381E9908980010A81D /* GameEnums.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,7 +190,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DEE791E1E97C5820010A81D /* GameScene.swift in Sources */,
+				8DEE79391E9908980010A81D /* GameEnums.swift in Sources */,
 				8DEE79201E97C5820010A81D /* GameViewController.swift in Sources */,
+				8DEE793B1E9908D40010A81D /* RandomNumbers.swift in Sources */,
+				8DEE79361E99079C0010A81D /* LaneLim.swift in Sources */,
 				8DEE79181E97C5820010A81D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
