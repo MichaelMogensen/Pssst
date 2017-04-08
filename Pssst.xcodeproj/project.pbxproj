@@ -73,7 +73,6 @@
 				8DEE79171E97C5820010A81D /* AppDelegate.swift */,
 				8DEE79191E97C5820010A81D /* GameScene.sks */,
 				8DEE791B1E97C5820010A81D /* Actions.sks */,
-				8DEE791D1E97C5820010A81D /* GameScene.swift */,
 				8DEE791F1E97C5820010A81D /* GameViewController.swift */,
 				8DEE79211E97C5820010A81D /* Main.storyboard */,
 				8DEE79241E97C5820010A81D /* Assets.xcassets */,
@@ -94,6 +93,7 @@
 		8DEE79311E9905440010A81D /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				8DEE791D1E97C5820010A81D /* GameScene.swift */,
 			);
 			name = Game;
 			sourceTree = "<group>";
