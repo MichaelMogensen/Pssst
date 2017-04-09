@@ -54,10 +54,10 @@ class Pssst
     ****************************************/
 
     init(
-        gameScene: GameScene,
-        buildForDevice: EDevice,
-        width: Int,
-        height: Int)
+        _ gameScene: GameScene,
+        _ buildForDevice: EDevice,
+        _ width: Int,
+        _ height: Int)
     {
         // Setup right dimension for current divice.
         switch (buildForDevice)
@@ -107,11 +107,10 @@ class Pssst
         // Add new worm(s).
         if (wormsCount < wormsCountMin)
         {
-            // FIX LATER
-            /*
-            for var worm = 1; worm <= wormsCountMin; worm += 1
-            { wormAnimations.append(CreateRandomWormCrawlingInZigZag(worm)) }
-             */
+            for worm in 1...wormsCountMin
+            {
+                wormAnimations.append(CreateRandomWormCrawlingInZigZag(worm))
+            }
         }
         else
         {
@@ -123,8 +122,8 @@ class Pssst
     // Add random duster(s) if needed.
     func CheckUpOnDusters(_ lookupAnimalExtrema: (EAnimal) -> (min: Int, max:Int))
     {
-        let _/*dusters*/ = self.gameScene.SelectNames("Duster").count
-        let _/*dusterExtrema*/ = lookupAnimalExtrema(EAnimal.duster)
+        //let dusters = self.gameScene.SelectNames("Duster").count
+        //let dusterExtrema = lookupAnimalExtrema(EAnimal.duster)
         // TODO.
     }
     // Add random bee(s) if needed.
@@ -174,9 +173,9 @@ class Pssst
     // Be sure that sufficient animals are present at all time.
     func UpdateGameState()
     {
-        CheckUpOnAllAnimals()
-        CheckUpOnGameState()
-        CheckUpOnFlowerGrowth()
+        //CheckUpOnAllAnimals()
+        //CheckUpOnGameState()
+        //CheckUpOnFlowerGrowth()
     }
     // Setup beginning animations.
     func Setup(_ forReal: Bool = false)
@@ -188,10 +187,10 @@ class Pssst
         else
         {
             self.gameScene.AddNode(LoadBackground())
-            self.gameScene.AddAnimations(SprayCans())
-            self.gameScene.AddAnimation(Flower())
-            self.gameScene.AddAnimation(OwlForUser())
-            Start()
+            //self.gameScene.AddAnimations(SprayCans())
+            //self.gameScene.AddAnimation(Flower())
+            //self.gameScene.AddAnimation(OwlForUser())
+            //Start()
         }
     }
     // Load game backgound from original 1983 picture.
@@ -520,6 +519,7 @@ class Pssst
     // Turn flag to signal this animal as eating.
     func TagYetAnotherAnimalAsEating(_ ID: String)
     {
+        /*
         // Remember that this animal is eating.
         if let animation = self.gameScene.GetAnimation(ID)
         {
@@ -530,8 +530,9 @@ class Pssst
             }
         }
         // Update all eating animal positions to help better position of new eating animal.
-        // FIX LATER
-        //(Pssst.gameState.leftEatingAnimalPositions, Pssst.gameState.rightEatingAnimalPositions) = GetPositionOfAllLeftAndRightEatingAnimals()
+        (Pssst.gameState.leftEatingAnimalPositions,
+         Pssst.gameState.rightEatingAnimalPositions) =
+            GetPositionOfAllLeftAndRightEatingAnimals()
         // Update all eating animal count.
         Pssst.gameState.animalsEating = Pssst.gameState.leftEatingAnimalPositions.count + Pssst.gameState.rightEatingAnimalPositions.count
         // Time to shrink?
@@ -543,6 +544,7 @@ class Pssst
                 flower.Shrink()
             }
         }
+        */
     }
     // Get left/right positions of all eating animals.
     func GetPositionOfAllLeftAndRightEatingAnimals() -> ([CGPoint]?, [CGPoint]?)

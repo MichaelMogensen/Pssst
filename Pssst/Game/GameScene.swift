@@ -32,7 +32,9 @@ class GameScene: SKScene
         fatalError("init(coder:) has not been implemented")
     }
     
-    // Setup our scene.
+    /// <#Description#>
+    ///
+    /// - Parameter view: <#view description#>
     override func didMove(to view: SKView)
     {
         BeginGame()
@@ -132,10 +134,10 @@ class GameScene: SKScene
         // Start over.
         removeAllChildren()
         self.pssst = Pssst(
-            gameScene: self,
-            buildForDevice: buildForDevice,
-            width: Int(self.frame.size.width),
-            height: Int(self.frame.size.height))
+            self,
+            buildForDevice,
+            Int(self.frame.size.width),
+            Int(self.frame.size.height))
     }
     // End the game.
     func EndGame()
