@@ -14,7 +14,7 @@ class GameScene: SKScene
     * Basic properties.                    *
     ****************************************/
 
-    var pssst: Pssst! = nil
+    var pssst: PssstOld! = nil
     
     let feelAllTouches = false
     var lastTouch: CGPoint? = nil
@@ -133,7 +133,7 @@ class GameScene: SKScene
 
         // Start over.
         removeAllChildren()
-        self.pssst = Pssst(
+        self.pssst = PssstOld(
             self,
             buildForDevice,
             Int(self.frame.size.width),

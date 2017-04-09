@@ -9,7 +9,7 @@
 import Foundation
 import SpriteKit
 
-class Pssst
+class PssstOld
 {
    /****************************************
     * Basic static properties              *
@@ -46,7 +46,7 @@ class Pssst
     
     var TheFlower: GameSpriteNode!
     {
-        get { return gameScene.GetAnimation(Pssst.gameState.flowerID) }
+        get { return gameScene.GetAnimation(PssstOld.gameState.flowerID) }
     }
     
    /****************************************
@@ -74,7 +74,7 @@ class Pssst
         self.gameTimer = NSecondsTimer(
             timeout: 1,
             handler: Update)
-        Pssst.gameState = GameState()
+        PssstOld.gameState = GameState()
         Setup()
     }
     
@@ -87,7 +87,7 @@ class Pssst
     {
         func LookupAnimalExtrema(_ animal: EAnimal) -> (min: Int, max:Int)
         {
-            let allAnimalsInLane = Pssst.gameLim.filter { $0.lane == self.lane }
+            let allAnimalsInLane = PssstOld.gameLim.filter { $0.lane == self.lane }
             let animalRequested = allAnimalsInLane.filter { $0.animal == animal }[0]
             return (animalRequested.min, animalRequested.max)
         }
@@ -139,14 +139,14 @@ class Pssst
         // Remember current rect. of flower in gamestate.
         if let theFlower = TheFlower
         {
-            Pssst.gameState.flowerRect = CGRect(origin: theFlower.position, size: theFlower.size)
+            PssstOld.gameState.flowerRect = CGRect(origin: theFlower.position, size: theFlower.size)
         }
         // Attach leaf.
         let leafsCount = gameScene.SelectNames("Leaf").count
         if (leafsCount <  AnimationBase.gameDimensions.flowerLeafsMax)
         {
             let leafδy = 30
-            let stemHeight = Int(Pssst.gameState.flowerRect.height)
+            let stemHeight = Int(PssstOld.gameState.flowerRect.height)
             if (stemHeight > leafδy * (1 + leafsCount))
             {
                 gameScene.AddAnimation(CreateLeaf(MathHelper.IsEven(leafsCount) ? ESide.right : ESide.left, yPos: stemHeight - 10))
@@ -168,7 +168,7 @@ class Pssst
             }
             return false
         }
-        Pssst.gameState.animalsEating = self.gameScene.FilterChildren(filterAnimalIsEating).count
+        PssstOld.gameState.animalsEating = self.gameScene.FilterChildren(filterAnimalIsEating).count
     }
     // Be sure that sufficient animals are present at all time.
     func UpdateGameState()
@@ -180,14 +180,14 @@ class Pssst
     // Setup beginning animations.
     func Setup(_ forReal: Bool = false)
     {
-        if (Pssst.showStartScreen && !forReal)
+        if (PssstOld.showStartScreen && !forReal)
         {
             self.gameScene.AddAnimation(StartScreen())
         }
         else
         {
             self.gameScene.AddNode(LoadBackground())
-            //self.gameScene.AddAnimations(SprayCans())
+            self.gameScene.AddAnimations(SprayCans())
             //self.gameScene.AddAnimation(Flower())
             //self.gameScene.AddAnimation(OwlForUser())
             //Start()
@@ -426,7 +426,7 @@ class Pssst
             firstFrameNo: 50,
             frameDelta: 5)
         flower.Grow()
-        Pssst.gameState.flowerID = flower.animation.data.ID
+        PssstOld.gameState.flowerID = flower.animation.data.ID
         return flower
     }
     
@@ -438,8 +438,8 @@ class Pssst
     func CreateLeaf(_ side: ESide, yPos: Int) -> LeafAnimation!
     {
         let xPos = (side == ESide.left) ?
-            Int(Pssst.gameState.flowerRect.origin.x) - 14 :
-            Int(Pssst.gameState.flowerRect.origin.x) + 14
+            Int(PssstOld.gameState.flowerRect.origin.x) - 14 :
+            Int(PssstOld.gameState.flowerRect.origin.x) + 14
         
         let leaf = LeafAnimation(
             textureAtlasName: "Leaf.atlas",
@@ -497,7 +497,7 @@ class Pssst
             xPos: AnimationBase.gameDimensions.Width / 2,
             yPos: AnimationBase.gameDimensions.Height / 2)
         splashScr.MoveInPlaceNCycles(10, restoreToFirstFrame: true, endAnimationHandler: StartScreenEnded)
-        Pssst.gameState.startScreenID = splashScr.animation.data.ID
+        PssstOld.gameState.startScreenID = splashScr.animation.data.ID
 
         return splashScr
     }
@@ -505,7 +505,7 @@ class Pssst
     func StartScreenEnded()
     {
         // Remove start screen now and really begin the game...
-        if let startScreen = gameScene.GetAnimation(Pssst.gameState.startScreenID)
+        if let startScreen = gameScene.GetAnimation(PssstOld.gameState.startScreenID)
         {
             startScreen.removeFromParent()
             Setup(true)

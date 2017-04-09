@@ -91,7 +91,7 @@ class GameDimensions
     { get { return bookcaseContent } set { bookcaseContent = newValue } }
     
     // Make bookcase empty.
-    fileprivate func EmptyBookcase()
+    func EmptyBookcase()
     {
         if (self.BookcaseContent == nil)
         {
@@ -178,6 +178,7 @@ class GameDimensionsIPhone6 : GameDimensions
     override init(width: Int, height: Int)
     {
         super.init(width: width, height: height)
+        //super.init(width: 667, height: 375)
         
         // Flower.
         self.flowerCrownHeightMax = 110

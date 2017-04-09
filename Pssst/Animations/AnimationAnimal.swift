@@ -62,12 +62,12 @@ class AnimationAnimal : AnimationBase
                 var flowerPos = AnimationBase.gameDimensions.FlowerPosition
                 flowerPos.x += (cameFromLeftOrRight == ESide.left) ? -self.animation.size.width / 2 : self.animation.size.width / 2
                 // Find appropriate place on flower stem.
-                let minY = Int(Pssst.gameState.flowerRect.origin.y)
-                let maxY = Int(Pssst.gameState.flowerRect.origin.y) + Int(Pssst.gameState.flowerRect.size.height) - Int(CGFloat(AnimationBase.gameDimensions.flowerCrownHeightMax) / 1.6) // Division by 1.6: The picture is scaled in usage.
+                let minY = Int(PssstOld.gameState.flowerRect.origin.y)
+                let maxY = Int(PssstOld.gameState.flowerRect.origin.y) + Int(PssstOld.gameState.flowerRect.size.height) - Int(CGFloat(AnimationBase.gameDimensions.flowerCrownHeightMax) / 1.6) // Division by 1.6: The picture is scaled in usage.
                 
                 let eatingAnimalPositions = (cameFromLeftOrRight == ESide.left) ?
-                    Pssst.gameState.leftEatingAnimalPositions :
-                    Pssst.gameState.rightEatingAnimalPositions
+                    PssstOld.gameState.leftEatingAnimalPositions :
+                    PssstOld.gameState.rightEatingAnimalPositions
                
                 if eatingAnimalPositions != nil
                 {
