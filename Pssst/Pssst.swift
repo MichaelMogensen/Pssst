@@ -89,20 +89,19 @@ class Pssst : SKScene
      * Basic properties.                    *
      ****************************************/
     
-    var Width = 0
-    var Height = 0
+    private var Width = 0
+    private var Height = 0
     
-    var ShelfXPos = [ 0, 0 ]
-    var ShelfYPos = [ 0, 0, 0, 0, 0 ]
+    private var Shelfs = [Shelf]()
     
-    var BrickWallThickness = 0
-    var FloorThickness = 0
-    var ShelfThickness = 0
-    var ShelfHeight = 0
-    var ShelfWidth = 0
+    private var BrickWallThickness = 0
+    private var FloorThickness = 0
+    private var ShelfThickness = 0
+    private var ShelfHeight = 0
+    private var ShelfWidth = 0
 
-    var NonAnimalMargin = 0
-    var Animalδy = 0
+    private var NonAnimalMargin = 0
+    private var Animalδy = 0
     
     /****************************************
      * Init.                                *
@@ -132,14 +131,18 @@ class Pssst : SKScene
     // Setup the game.
     func Setup()
     {
-        // Make x shelf pos. match current screen.
-        for x in 0...self.ShelfXPos.count
-        { self.ShelfXPos[x] = self.Width * Pssst.shelfXPosPct[x] }
-        // Make y shelf pos. match current screen.
-        for y in 0...self.ShelfYPos.count
-        { self.ShelfXPos[y] = self.Height * Pssst.shelfYPosPct[y] }
+        // Setup empty shelfs for current screen.
+        Shelfs = []
+        for xid in 0..<Pssst.shelfXPosPct.count
+        {
+            for yid in 0..<Pssst.shelfYPosPct.count
+            {
+                let id = xid * Pssst.shelfYPosPct.count + yid
+                Shelfs.append(Shelf(id, self.Width * Pssst.shelfXPosPct[xid], self.Height * Pssst.shelfYPosPct[yid], false))
+            }
+        }
         
-        // Make all the other fixpoints match current screen.
+        // Setup all the other fixpoints for current screen.
         self.BrickWallThickness = self.Width * Pssst.BrickWallThicknessPct
         
         
@@ -157,39 +160,7 @@ class Pssst : SKScene
     
 }
 
-/*
- 
- private var width: Int = 0
- var Width: Int
- { get { return width } set { width = newValue } }
- 
- private var height: Int = 0
- var Height: Int
- { get { return height } set { height = newValue } }
 
-*/
-
-/*
- // static let iPhone6_Screen =         (667, 375)
- 
- // Flower.
- self.flowerCrownHeightMax = 110
- 
- // Measured pix. pos. in used background.
- self.xPosOfShelf = [ 41, 625 ]
- self.yPosOfShelf = [ 15, 78, 140, 203, 265 ]
- 
- // Measured pix. pos. in used background.
- self.BrickWallThickness = 21
- self.FloorThickness = 14
- self.ShelfThickness = 16
- self.ShelfHeight = 47
- self.ShelfWidth = 41
- 
- self.WormMargin = Rect(left: 80, top: 20, right: 80, bottom: 100)
- self.wormδy = 30
- 
- */
 
 
 

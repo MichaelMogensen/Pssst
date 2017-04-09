@@ -20,12 +20,12 @@ class PssstOld
     static let gameLim =
     [
         LaneLim(lane: 1, animal: EAnimal.worm, min: 3, max: 10),
-        LaneLim(lane: 1, animal: EAnimal.duster),
-        LaneLim(lane: 1, animal: EAnimal.bee),
+        LaneLim(lane: 1, animal: EAnimal.duster, min: 0, max: 0),
+        LaneLim(lane: 1, animal: EAnimal.bee, min: 0, max: 0),
 
         LaneLim(lane: 2, animal: EAnimal.worm, min: 3, max: 20),
         LaneLim(lane: 2, animal: EAnimal.duster, min: 3, max: 6),
-        LaneLim(lane: 2, animal: EAnimal.bee),
+        LaneLim(lane: 2, animal: EAnimal.bee, min: 0, max: 0),
         
         LaneLim(lane: 3, animal: EAnimal.worm, min: 3, max: 30),
         LaneLim(lane: 3, animal: EAnimal.duster, min: 3, max: 6),

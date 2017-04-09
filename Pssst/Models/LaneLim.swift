@@ -16,10 +16,10 @@ class LaneLim
     var max: Int
     
     init(
-        lane: Int = 0,
-        animal: EAnimal = EAnimal.nothing,
-        min: Int = 0,
-        max: Int = 0)
+        lane: Int,
+        animal: EAnimal,
+        min: Int,
+        max: Int)
     {
         self.lane = lane
         self.animal = animal
