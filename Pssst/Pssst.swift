@@ -92,7 +92,7 @@ class Pssst : SKScene
     private var Width = 0
     private var Height = 0
     
-    private var Shelfs = [Shelf]()
+    private var Shelfs = [Int : Shelf]()
     
     private var BrickWallThickness = 0
     private var FloorThickness = 0
@@ -132,13 +132,13 @@ class Pssst : SKScene
     func Setup()
     {
         // Setup empty shelfs for current screen.
-        Shelfs = []
+        self.Shelfs.removeAll()
         for xid in 0..<Pssst.shelfXPosPct.count
         {
             for yid in 0..<Pssst.shelfYPosPct.count
             {
                 let id = xid * Pssst.shelfYPosPct.count + yid
-                Shelfs.append(Shelf(id, self.Width * Pssst.shelfXPosPct[xid], self.Height * Pssst.shelfYPosPct[yid], false))
+                self.Shelfs[id] = Shelf(self.Width * Pssst.shelfXPosPct[xid], self.Height * Pssst.shelfYPosPct[yid], false)
             }
         }
         

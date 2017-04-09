@@ -10,13 +10,11 @@ import Foundation
 
 class Shelf
 {
-    private var Id = 0
     private var ToolPos = (0, 0)
     private var IsOccupied = false
     
-    init(_ id: Int, _ xToolPos: Int, _ yToolPos: Int, _ isOccupied: Bool)
+    init(_ xToolPos: Int, _ yToolPos: Int, _ isOccupied: Bool)
     {
-        self.Id = id
         self.ToolPos = (xToolPos, yToolPos)
         self.IsOccupied = isOccupied
     }
