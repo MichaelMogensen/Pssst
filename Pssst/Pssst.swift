@@ -56,52 +56,11 @@ class Pssst : SKScene
         LaneLim(lane: 3, animal: EAnimal.bee,    min: 3, max: 6)
     ]
 
-    static private let iPhone6 = (667, 375)
-    
-    static private let shelfXPosPct =
-    [
-         41 / iPhone6.0,
-        625 / iPhone6.0
-    ]
-    static private let shelfYPosPct =
-    [
-         15 / iPhone6.1,
-         78 / iPhone6.1,
-        140 / iPhone6.1,
-        203 / iPhone6.1,
-        265 / iPhone6.1
-    ]
-
-    static private let BrickWallThicknessPct = 21 / iPhone6.0
-    static private let FloorThicknessPct = 14 / iPhone6.0
-    static private let ShelfThicknessPct = 16 / iPhone6.0
-    static private let ShelfHeightPct = 47 / iPhone6.0
-    static private let ShelfWidthPct = 41 / iPhone6.0
-
-    static private let NonAnimalMarginPct = Rect(
-        left:    80 / iPhone6.0,
-        top:     20 / iPhone6.1,
-        right:   80 / iPhone6.0,
-        bottom: 100 / iPhone6.1)
-    static private let AnimalδyPct = 30 / iPhone6.1
-
     /****************************************
      * Basic properties.                    *
      ****************************************/
     
-    private var Width = 0
-    private var Height = 0
-    
-    private var Shelfs = [Int : Shelf]()
-    
-    private var BrickWallThickness = 0
-    private var FloorThickness = 0
-    private var ShelfThickness = 0
-    private var ShelfHeight = 0
-    private var ShelfWidth = 0
-
-    private var NonAnimalMargin = 0
-    private var Animalδy = 0
+    private var ScreenFixpoints: DeviceScreenFixpoints?
     
     /****************************************
      * Init.                                *
@@ -112,8 +71,9 @@ class Pssst : SKScene
         super.init(size: size)
         
         // Set to current screen.
-        self.Width = Int(size.width)
-        self.Height = Int(size.height)
+        self.ScreenFixpoints = DeviceScreenFixpoints(Int(size.width), Int(size.height))
+        
+        BeginGame()
     }
     required init?(coder aDecoder: NSCoder)
     {
@@ -124,39 +84,88 @@ class Pssst : SKScene
      * Internal methods.                    *
      ****************************************/
     
+    // Load game backgound from original 1983 picture.
+    private func LoadBackground() -> GameSpriteNode!
+    {
+        let backgroundSprite = GameSpriteNode(imageNamed: "Background")
+        backgroundSprite.name = "Background"
+        backgroundSprite.size = CGSize(
+            width: ScreenFixpoints!.Width,
+            height: ScreenFixpoints!.Height)
+        backgroundSprite.position = CGPoint(
+            x: ScreenFixpoints!.Width / 2,
+            y: ScreenFixpoints!.Height / 2)
+        backgroundSprite.data = GameSpriteNodeData() // Not used for anything.
+        return backgroundSprite
+    }
+    
+    // Begin game.
+    func BeginGame()
+    {
+        // Build game scene.
+        removeAllChildren()
+        addChild(LoadBackground())
+    }
+    
+    // Continue game.
+    func ProceedGame()
+    {
+    }
+    
+    // End game.
+    func EndGame()
+    {
+    }
+    
     /****************************************
      * Exposed methods.                     *
      ****************************************/
     
-    // Setup the game.
-    func Setup()
-    {
-        // Setup empty shelfs for current screen.
-        self.Shelfs.removeAll()
-        for xid in 0..<Pssst.shelfXPosPct.count
-        {
-            for yid in 0..<Pssst.shelfYPosPct.count
-            {
-                let id = xid * Pssst.shelfYPosPct.count + yid
-                self.Shelfs[id] = Shelf(self.Width * Pssst.shelfXPosPct[xid], self.Height * Pssst.shelfYPosPct[yid], false)
-            }
-        }
-        
-        // Setup all the other fixpoints for current screen.
-        self.BrickWallThickness = self.Width * Pssst.BrickWallThicknessPct
-        
-        
-        
-        // And the rest ...
-    }
-    
     /****************************************
      * Event handlers.                      *
      ****************************************/
+    
+    override func didMove(to view: SKView)
+    {
+    }
+    // Called before each frame is rendered.
+    override func update(_ currentTime: TimeInterval)
+    {
+        Util.Log("Time = (\(currentTime))")
+    }
 
     /****************************************
      * Helper methods.                      *
      ****************************************/
+
+    // On touch began for 1..N fingers.
+    func OnTouchesBegan(_ touch: UITouch)
+    {
+        let location = touch.location(in: self)
+        
+        Util.Log("Begin location = (\(location.x), \(location.y))")
+    }
+    // On touch has moved for 1..N fingers.
+    func OnTouchesMoved(_ touch: UITouch)
+    {
+        let location = touch.location(in: self)
+        
+        Util.Log("Moved location = (\(location.x), \(location.y))")
+    }
+    // On touch has ended for 1..N fingers.
+    func OnTouchesEnded(_ touch: UITouch)
+    {
+        let location = touch.location(in: self)
+        
+        Util.Log("End location = (\(location.x), \(location.y))")
+    }
+    // On touch has cancelled for 1..N fingers.
+    func OnTouchesCancelled(_ touch: UITouch)
+    {
+        let location = touch.location(in: self)
+        
+        Util.Log("Cancel location = (\(location.x), \(location.y))")
+    }
     
 }
 

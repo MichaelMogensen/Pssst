@@ -73,7 +73,7 @@ class AnimationBase
         return (travelTime: duration, endPoint: endPoint)
     }
     // Load all atlas images and build up the frames.
-    fileprivate func SetupAnimation(
+    func SetupAnimation(
         _ textureAtlasName: String,
         animationName: String,
         uniqueName: String,
