@@ -30,3 +30,19 @@ return Int(UIInterfaceOrientationMask.All.rawValue)
 }
 }
 */
+
+// Load game backgound from original 1983 picture.
+private func LoadBackground() -> SKSpriteNode!
+{
+let backgroundSprite = SKSpriteNode(imageNamed: EPssstAnimals.Background.Name)
+backgroundSprite.name = EPssstAnimals.Background.Name
+backgroundSprite.size = CGSize(
+width: Screen!.Width,
+height: Screen!.Height)
+backgroundSprite.position = CGPoint(
+x: Screen!.Width / 2,
+y: Screen!.Height / 2)
+return backgroundSprite
+}
+
+

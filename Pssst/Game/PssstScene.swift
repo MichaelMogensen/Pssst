@@ -40,6 +40,7 @@ class PssstScene : SKScene
     /****************************************
      * Basic static properties              *
      ****************************************/
+        
 /*
     static private let laneLim =
     [
@@ -83,27 +84,18 @@ class PssstScene : SKScene
     /****************************************
      * Internal methods.                    *
      ****************************************/
-    
-    // Load game backgound from original 1983 picture.
-    private func LoadBackground() -> SKSpriteNode!
-    {
-        let backgroundSprite = SKSpriteNode(imageNamed: "Background")
-        backgroundSprite.name = "Background"
-        backgroundSprite.size = CGSize(
-            width: Screen!.Width,
-            height: Screen!.Height)
-        backgroundSprite.position = CGPoint(
-            x: Screen!.Width / 2,
-            y: Screen!.Height / 2)
-        return backgroundSprite
-    }
-    
+        
     // Begin game.
     func BeginGame()
     {
         // Build game scene.
         removeAllChildren()
-        addChild(LoadBackground())
+        AddSprite(
+            EPssstAnimals.Background.Name,
+            Screen!.Width / 2,
+            Screen!.Height / 2,
+            Screen!.Width,
+            Screen!.Height)
     }
     
     // Continue game.
@@ -137,33 +129,135 @@ class PssstScene : SKScene
      * Helper methods.                      *
      ****************************************/
 
+    // Add new sprite. Name has to be unique.
+    func AddSprite(
+        _ name: String,
+        _ x: Int,
+        _ y: Int,
+        _ width: Int,
+        _ height: Int)
+    {
+        let sprite = PssstSprite(imageNamed: name)
+        sprite.name = name
+        sprite.size = CGSize(
+            width: width,
+            height: height)
+        sprite.position = CGPoint(
+            x: x,
+            y: y)
+        addChild(sprite)
+    }
+
+    // Add new sprite with animation. Name has to be unique.
+    func AddSpriteAnimation(
+        _ name: String,
+        _ atlasName: String! = nil, // Like "WormYellow"
+        _ frameFromId: Int = -1,
+        _ frameToId: Int = -1,
+        _ frameStep: Int = -1,
+        _ xScale: Int = 1,
+        _ yScale: Int = 1)
+    {
+        func TryLoadAtlas() throws -> SKTextureAtlas?
+        {
+            return SKTextureAtlas(named: atlasName)
+        }
+
+        let textureAtlas: SKTextureAtlas?
+        do
+        {
+            textureAtlas = try TryLoadAtlas()
+        }
+        catch
+        {
+            textureAtlas = nil
+        }
+        
+        // Got atlas?
+        if (textureAtlas == nil)
+        { return }
+        
+        // Now load frames from it one by one.
+        var sprite = PssstSprite()
+        for frameNo in 0..<textureAtlas!.textureNames.count
+        {
+            let frameId = frameFromId + frameNo * frameStep
+            let textureName = "\(atlasName)\(frameId)"
+            let frame = textureAtlas?.textureNamed(textureName)
+            if (frameNo == 0)
+            {
+                sprite = PssstSprite(texture: frame)
+                sprite.name = name
+                sprite.frames = []
+            }
+            sprite.frames.append(frame!)
+        }
+        addChild(sprite)
+    }
+    
+    // Return sprite by name. On several found nil are returned so has to be unique.
+    func LookupSprite(_ name: String) -> PssstSprite?
+    {
+        func FindFromName(_ object: AnyObject) -> Bool
+        {
+            if let sprite = object as? PssstSprite
+            {
+                return sprite.name == name
+            }
+            return false
+        }
+        let spritesFound = children.filter(FindFromName) as! [PssstSprite]
+        return spritesFound.count == 1 ? spritesFound.first : nil
+    }
+    
+    // Move existing sprite.
+    func MoveSprite(
+        _ xDistination: Int,
+        _ yDistination: Int,
+        _ travelTime: Double)
+    {
+        
+    }
+    
+    // Remove existing sprite.
+    func RemoveSprite(_ name : String)
+    {
+        
+    }
+    
+    // Return T if sprite exist and F if not.
+    func SpriteExist(_ name: String) -> Bool
+    {
+        return true
+    }
+    
     // On touch began for 1..N fingers.
     func OnTouchesBegan(_ touch: UITouch)
     {
-        let location = touch.location(in: self)
-        
-        Util.Log("Begin location = (\(location.x), \(location.y))")
+//        let location = touch.location(in: self)
+//        
+//        Util.Log("Begin location = (\(location.x), \(location.y))")
     }
     // On touch has moved for 1..N fingers.
     func OnTouchesMoved(_ touch: UITouch)
     {
-        let location = touch.location(in: self)
-        
-        Util.Log("Moved location = (\(location.x), \(location.y))")
+//        let location = touch.location(in: self)
+//        
+//        Util.Log("Moved location = (\(location.x), \(location.y))")
     }
     // On touch has ended for 1..N fingers.
     func OnTouchesEnded(_ touch: UITouch)
     {
-        let location = touch.location(in: self)
-        
-        Util.Log("End location = (\(location.x), \(location.y))")
+//        let location = touch.location(in: self)
+//        
+//        Util.Log("End location = (\(location.x), \(location.y))")
     }
     // On touch has cancelled for 1..N fingers.
     func OnTouchesCancelled(_ touch: UITouch)
     {
-        let location = touch.location(in: self)
-        
-        Util.Log("Cancel location = (\(location.x), \(location.y))")
+//        let location = touch.location(in: self)
+//        
+//        Util.Log("Cancel location = (\(location.x), \(location.y))")
     }
     
 }

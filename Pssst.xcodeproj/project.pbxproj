@@ -10,6 +10,8 @@
 		1E2233F91E9DA30D00ED81CF /* Crab.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1E2233F81E9DA30D00ED81CF /* Crab.txt */; };
 		1E42D5601E9DB38800DE20EC /* PssstScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E42D55E1E9DB38800DE20EC /* PssstScene.swift */; };
 		1E42D5611E9DB38800DE20EC /* PssstScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E42D55F1E9DB38800DE20EC /* PssstScreen.swift */; };
+		1E42D5631E9E375F00DE20EC /* PssstAnimals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E42D5621E9E375F00DE20EC /* PssstAnimals.swift */; };
+		1E42D5651E9E5E4E00DE20EC /* PssstSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E42D5641E9E5E4E00DE20EC /* PssstSprite.swift */; };
 		8D7195C91E9A5AAA00612BD8 /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D7195C81E9A5AAA00612BD8 /* Background.png */; };
 		8D7195D31E9A903200612BD8 /* Shelf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7195D21E9A903200612BD8 /* Shelf.swift */; };
 		8D7195D71E9B889A00612BD8 /* Misc.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8D7195D61E9B889A00612BD8 /* Misc.txt */; };
@@ -45,6 +47,8 @@
 		1E2233F81E9DA30D00ED81CF /* Crab.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Crab.txt; sourceTree = "<group>"; };
 		1E42D55E1E9DB38800DE20EC /* PssstScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PssstScene.swift; path = Game/PssstScene.swift; sourceTree = "<group>"; };
 		1E42D55F1E9DB38800DE20EC /* PssstScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PssstScreen.swift; path = Game/PssstScreen.swift; sourceTree = "<group>"; };
+		1E42D5621E9E375F00DE20EC /* PssstAnimals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PssstAnimals.swift; path = Game/PssstAnimals.swift; sourceTree = "<group>"; };
+		1E42D5641E9E5E4E00DE20EC /* PssstSprite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PssstSprite.swift; path = Game/PssstSprite.swift; sourceTree = "<group>"; };
 		8D7195C81E9A5AAA00612BD8 /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background.png; sourceTree = "<group>"; };
 		8D7195D21E9A903200612BD8 /* Shelf.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shelf.swift; sourceTree = "<group>"; };
 		8D7195D61E9B889A00612BD8 /* Misc.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Misc.txt; sourceTree = "<group>"; };
@@ -146,9 +150,11 @@
 		8DEE79311E9905440010A81D /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				1E42D5621E9E375F00DE20EC /* PssstAnimals.swift */,
 				1E42D55E1E9DB38800DE20EC /* PssstScene.swift */,
 				1E42D55F1E9DB38800DE20EC /* PssstScreen.swift */,
 				8DEE79941E991B610010A81D /* PssstViewController.swift */,
+				1E42D5641E9E5E4E00DE20EC /* PssstSprite.swift */,
 			);
 			name = Game;
 			sourceTree = "<group>";
@@ -357,8 +363,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E42D5601E9DB38800DE20EC /* PssstScene.swift in Sources */,
+				1E42D5651E9E5E4E00DE20EC /* PssstSprite.swift in Sources */,
 				8DEE797C1E9915190010A81D /* MathHelper.swift in Sources */,
 				8DEE79961E991B610010A81D /* PssstViewController.swift in Sources */,
+				1E42D5631E9E375F00DE20EC /* PssstAnimals.swift in Sources */,
 				8DEE79901E9918790010A81D /* Util.swift in Sources */,
 				8DEE793B1E9908D40010A81D /* RandomNumbers.swift in Sources */,
 				1E42D5611E9DB38800DE20EC /* PssstScreen.swift in Sources */,
