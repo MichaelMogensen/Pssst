@@ -35,12 +35,12 @@ import SpriteKit
 //
 //     x0                                          x1
 //
-class Pssst : SKScene
+class PssstScene : SKScene
 {
     /****************************************
      * Basic static properties              *
      ****************************************/
-
+/*
     static private let laneLim =
     [
         LaneLim(lane: 1, animal: EAnimal.worm,   min: 3, max: 10),
@@ -55,12 +55,12 @@ class Pssst : SKScene
         LaneLim(lane: 3, animal: EAnimal.duster, min: 3, max: 6),
         LaneLim(lane: 3, animal: EAnimal.bee,    min: 3, max: 6)
     ]
-
+*/
     /****************************************
      * Basic properties.                    *
      ****************************************/
     
-    private var ScreenFixpoints: DeviceScreenFixpoints?
+    private var Screen: PssstScreen?
     
     /****************************************
      * Init.                                *
@@ -71,7 +71,7 @@ class Pssst : SKScene
         super.init(size: size)
         
         // Set to current screen.
-        self.ScreenFixpoints = DeviceScreenFixpoints(Int(size.width), Int(size.height))
+        self.Screen = PssstScreen(Int(size.width), Int(size.height))
         
         BeginGame()
     }
@@ -85,17 +85,16 @@ class Pssst : SKScene
      ****************************************/
     
     // Load game backgound from original 1983 picture.
-    private func LoadBackground() -> GameSpriteNode!
+    private func LoadBackground() -> SKSpriteNode!
     {
-        let backgroundSprite = GameSpriteNode(imageNamed: "Background")
+        let backgroundSprite = SKSpriteNode(imageNamed: "Background")
         backgroundSprite.name = "Background"
         backgroundSprite.size = CGSize(
-            width: ScreenFixpoints!.Width,
-            height: ScreenFixpoints!.Height)
+            width: Screen!.Width,
+            height: Screen!.Height)
         backgroundSprite.position = CGPoint(
-            x: ScreenFixpoints!.Width / 2,
-            y: ScreenFixpoints!.Height / 2)
-        backgroundSprite.data = GameSpriteNodeData() // Not used for anything.
+            x: Screen!.Width / 2,
+            y: Screen!.Height / 2)
         return backgroundSprite
     }
     

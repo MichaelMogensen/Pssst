@@ -7,119 +7,75 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E2233F91E9DA30D00ED81CF /* Crab.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1E2233F81E9DA30D00ED81CF /* Crab.txt */; };
+		1E42D5601E9DB38800DE20EC /* PssstScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E42D55E1E9DB38800DE20EC /* PssstScene.swift */; };
+		1E42D5611E9DB38800DE20EC /* PssstScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E42D55F1E9DB38800DE20EC /* PssstScreen.swift */; };
 		8D7195C91E9A5AAA00612BD8 /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D7195C81E9A5AAA00612BD8 /* Background.png */; };
-		8D7195CB1E9A693100612BD8 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7195CA1E9A693100612BD8 /* Game.swift */; };
-		8D7195CD1E9A6B3300612BD8 /* Pssst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7195CC1E9A6B3300612BD8 /* Pssst.swift */; };
 		8D7195D31E9A903200612BD8 /* Shelf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7195D21E9A903200612BD8 /* Shelf.swift */; };
-		8D7195D51E9B877500612BD8 /* DeviceScreenFixpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7195D41E9B877500612BD8 /* DeviceScreenFixpoints.swift */; };
 		8D7195D71E9B889A00612BD8 /* Misc.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8D7195D61E9B889A00612BD8 /* Misc.txt */; };
 		8DEE79181E97C5820010A81D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE79171E97C5820010A81D /* AppDelegate.swift */; };
-		8DEE791C1E97C5820010A81D /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8DEE791B1E97C5820010A81D /* Actions.sks */; };
 		8DEE79231E97C5820010A81D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DEE79211E97C5820010A81D /* Main.storyboard */; };
 		8DEE79251E97C5820010A81D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DEE79241E97C5820010A81D /* Assets.xcassets */; };
 		8DEE79281E97C5820010A81D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DEE79261E97C5820010A81D /* LaunchScreen.storyboard */; };
 		8DEE79361E99079C0010A81D /* LaneLim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE79351E99079C0010A81D /* LaneLim.swift */; };
-		8DEE79391E9908980010A81D /* GameEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE79381E9908980010A81D /* GameEnums.swift */; };
 		8DEE793B1E9908D40010A81D /* RandomNumbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE793A1E9908D40010A81D /* RandomNumbers.swift */; };
-		8DEE79611E9914DE0010A81D /* AnimationBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE793D1E9914DE0010A81D /* AnimationBase.swift */; };
 		8DEE79621E9914DE0010A81D /* Bee.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8DEE793F1E9914DE0010A81D /* Bee.atlas */; };
-		8DEE79631E9914DE0010A81D /* BeeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE79401E9914DE0010A81D /* BeeAnimation.swift */; };
 		8DEE79641E9914DE0010A81D /* Box.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8DEE79421E9914DE0010A81D /* Box.atlas */; };
-		8DEE79651E9914DE0010A81D /* BoxAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE79431E9914DE0010A81D /* BoxAnimation.swift */; };
 		8DEE79661E9914DE0010A81D /* Duster.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8DEE79451E9914DE0010A81D /* Duster.atlas */; };
-		8DEE79671E9914DE0010A81D /* DusterAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE79461E9914DE0010A81D /* DusterAnimation.swift */; };
 		8DEE79681E9914DE0010A81D /* Flower.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8DEE79481E9914DE0010A81D /* Flower.atlas */; };
-		8DEE79691E9914DE0010A81D /* FlowerAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE79491E9914DE0010A81D /* FlowerAnimation.swift */; };
 		8DEE796A1E9914DE0010A81D /* Leaf.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8DEE794B1E9914DE0010A81D /* Leaf.atlas */; };
-		8DEE796B1E9914DE0010A81D /* LeafAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE794C1E9914DE0010A81D /* LeafAnimation.swift */; };
 		8DEE796C1E9914DE0010A81D /* Owl.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8DEE794E1E9914DE0010A81D /* Owl.atlas */; };
-		8DEE796D1E9914DE0010A81D /* OwlAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE794F1E9914DE0010A81D /* OwlAnimation.swift */; };
-		8DEE796E1E9914DE0010A81D /* SprayCanAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE79511E9914DE0010A81D /* SprayCanAnimation.swift */; };
 		8DEE796F1E9914DE0010A81D /* SprayCanBlue.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8DEE79521E9914DE0010A81D /* SprayCanBlue.atlas */; };
 		8DEE79701E9914DE0010A81D /* SprayCanRed.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8DEE79531E9914DE0010A81D /* SprayCanRed.atlas */; };
 		8DEE79711E9914DE0010A81D /* SprayCanYellow.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8DEE79541E9914DE0010A81D /* SprayCanYellow.atlas */; };
 		8DEE79721E9914DE0010A81D /* StartScreen.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8DEE79561E9914DE0010A81D /* StartScreen.atlas */; };
-		8DEE79731E9914DE0010A81D /* StartScreenAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE79571E9914DE0010A81D /* StartScreenAnimation.swift */; };
 		8DEE79741E9914DE0010A81D /* WaterCan.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8DEE79591E9914DE0010A81D /* WaterCan.atlas */; };
-		8DEE79751E9914DE0010A81D /* WaterCanAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE795A1E9914DE0010A81D /* WaterCanAnimation.swift */; };
-		8DEE79761E9914DE0010A81D /* WormAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE795C1E9914DE0010A81D /* WormAnimation.swift */; };
 		8DEE79771E9914DE0010A81D /* WormBlue.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8DEE795D1E9914DE0010A81D /* WormBlue.atlas */; };
 		8DEE79781E9914DE0010A81D /* WormGreen.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8DEE795E1E9914DE0010A81D /* WormGreen.atlas */; };
 		8DEE79791E9914DE0010A81D /* WormRed.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8DEE795F1E9914DE0010A81D /* WormRed.atlas */; };
 		8DEE797A1E9914DE0010A81D /* WormYellow.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8DEE79601E9914DE0010A81D /* WormYellow.atlas */; };
 		8DEE797C1E9915190010A81D /* MathHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE797B1E9915190010A81D /* MathHelper.swift */; };
-		8DEE797E1E99153C0010A81D /* GameDimensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE797D1E99153C0010A81D /* GameDimensions.swift */; };
-		8DEE79801E9915980010A81D /* GameSpriteNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE797F1E9915980010A81D /* GameSpriteNode.swift */; };
-		8DEE79831E9916FD0010A81D /* AnimationAnimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE79811E9916FD0010A81D /* AnimationAnimal.swift */; };
-		8DEE79841E9916FD0010A81D /* AnimationNonAnimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE79821E9916FD0010A81D /* AnimationNonAnimal.swift */; };
-		8DEE79861E99173A0010A81D /* GameSpriteNodeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE79851E99173A0010A81D /* GameSpriteNodeData.swift */; };
-		8DEE79881E99182E0010A81D /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE79871E99182E0010A81D /* GameState.swift */; };
 		8DEE798D1E9918790010A81D /* Rect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE79891E9918790010A81D /* Rect.swift */; };
 		8DEE798E1E9918790010A81D /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE798A1E9918790010A81D /* Timer.swift */; };
-		8DEE798F1E9918790010A81D /* Tool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE798B1E9918790010A81D /* Tool.swift */; };
 		8DEE79901E9918790010A81D /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE798C1E9918790010A81D /* Util.swift */; };
-		8DEE79951E991B610010A81D /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE79931E991B610010A81D /* GameScene.swift */; };
-		8DEE79961E991B610010A81D /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE79941E991B610010A81D /* GameViewController.swift */; };
-		8DEE79991E991F9E0010A81D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE79981E991F9E0010A81D /* Extensions.swift */; };
+		8DEE79961E991B610010A81D /* PssstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE79941E991B610010A81D /* PssstViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E2233F81E9DA30D00ED81CF /* Crab.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Crab.txt; sourceTree = "<group>"; };
+		1E42D55E1E9DB38800DE20EC /* PssstScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PssstScene.swift; path = Game/PssstScene.swift; sourceTree = "<group>"; };
+		1E42D55F1E9DB38800DE20EC /* PssstScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PssstScreen.swift; path = Game/PssstScreen.swift; sourceTree = "<group>"; };
 		8D7195C81E9A5AAA00612BD8 /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background.png; sourceTree = "<group>"; };
-		8D7195CA1E9A693100612BD8 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Game.swift; path = Game/Game.swift; sourceTree = "<group>"; };
-		8D7195CC1E9A6B3300612BD8 /* Pssst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pssst.swift; sourceTree = "<group>"; };
 		8D7195D21E9A903200612BD8 /* Shelf.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shelf.swift; sourceTree = "<group>"; };
-		8D7195D41E9B877500612BD8 /* DeviceScreenFixpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceScreenFixpoints.swift; sourceTree = "<group>"; };
 		8D7195D61E9B889A00612BD8 /* Misc.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Misc.txt; sourceTree = "<group>"; };
 		8DEE79141E97C5820010A81D /* Pssst.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pssst.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DEE79171E97C5820010A81D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8DEE791B1E97C5820010A81D /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		8DEE79221E97C5820010A81D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8DEE79241E97C5820010A81D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8DEE79271E97C5820010A81D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8DEE79291E97C5820010A81D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DEE79351E99079C0010A81D /* LaneLim.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaneLim.swift; sourceTree = "<group>"; };
-		8DEE79381E9908980010A81D /* GameEnums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameEnums.swift; sourceTree = "<group>"; };
 		8DEE793A1E9908D40010A81D /* RandomNumbers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RandomNumbers.swift; path = Utils/RandomNumbers.swift; sourceTree = "<group>"; };
-		8DEE793D1E9914DE0010A81D /* AnimationBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationBase.swift; sourceTree = "<group>"; };
 		8DEE793F1E9914DE0010A81D /* Bee.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Bee.atlas; sourceTree = "<group>"; };
-		8DEE79401E9914DE0010A81D /* BeeAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeeAnimation.swift; sourceTree = "<group>"; };
 		8DEE79421E9914DE0010A81D /* Box.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Box.atlas; sourceTree = "<group>"; };
-		8DEE79431E9914DE0010A81D /* BoxAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxAnimation.swift; sourceTree = "<group>"; };
 		8DEE79451E9914DE0010A81D /* Duster.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Duster.atlas; sourceTree = "<group>"; };
-		8DEE79461E9914DE0010A81D /* DusterAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DusterAnimation.swift; sourceTree = "<group>"; };
 		8DEE79481E9914DE0010A81D /* Flower.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Flower.atlas; sourceTree = "<group>"; };
-		8DEE79491E9914DE0010A81D /* FlowerAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowerAnimation.swift; sourceTree = "<group>"; };
 		8DEE794B1E9914DE0010A81D /* Leaf.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Leaf.atlas; sourceTree = "<group>"; };
-		8DEE794C1E9914DE0010A81D /* LeafAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeafAnimation.swift; sourceTree = "<group>"; };
 		8DEE794E1E9914DE0010A81D /* Owl.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Owl.atlas; sourceTree = "<group>"; };
-		8DEE794F1E9914DE0010A81D /* OwlAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OwlAnimation.swift; sourceTree = "<group>"; };
-		8DEE79511E9914DE0010A81D /* SprayCanAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SprayCanAnimation.swift; sourceTree = "<group>"; };
 		8DEE79521E9914DE0010A81D /* SprayCanBlue.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = SprayCanBlue.atlas; sourceTree = "<group>"; };
 		8DEE79531E9914DE0010A81D /* SprayCanRed.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = SprayCanRed.atlas; sourceTree = "<group>"; };
 		8DEE79541E9914DE0010A81D /* SprayCanYellow.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = SprayCanYellow.atlas; sourceTree = "<group>"; };
 		8DEE79561E9914DE0010A81D /* StartScreen.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = StartScreen.atlas; sourceTree = "<group>"; };
-		8DEE79571E9914DE0010A81D /* StartScreenAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenAnimation.swift; sourceTree = "<group>"; };
 		8DEE79591E9914DE0010A81D /* WaterCan.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = WaterCan.atlas; sourceTree = "<group>"; };
-		8DEE795A1E9914DE0010A81D /* WaterCanAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterCanAnimation.swift; sourceTree = "<group>"; };
-		8DEE795C1E9914DE0010A81D /* WormAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WormAnimation.swift; sourceTree = "<group>"; };
 		8DEE795D1E9914DE0010A81D /* WormBlue.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = WormBlue.atlas; sourceTree = "<group>"; };
 		8DEE795E1E9914DE0010A81D /* WormGreen.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = WormGreen.atlas; sourceTree = "<group>"; };
 		8DEE795F1E9914DE0010A81D /* WormRed.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = WormRed.atlas; sourceTree = "<group>"; };
 		8DEE79601E9914DE0010A81D /* WormYellow.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = WormYellow.atlas; sourceTree = "<group>"; };
 		8DEE797B1E9915190010A81D /* MathHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MathHelper.swift; path = Utils/MathHelper.swift; sourceTree = "<group>"; };
-		8DEE797D1E99153C0010A81D /* GameDimensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameDimensions.swift; path = Game/GameDimensions.swift; sourceTree = "<group>"; };
-		8DEE797F1E9915980010A81D /* GameSpriteNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameSpriteNode.swift; path = Game/GameSpriteNode.swift; sourceTree = "<group>"; };
-		8DEE79811E9916FD0010A81D /* AnimationAnimal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationAnimal.swift; sourceTree = "<group>"; };
-		8DEE79821E9916FD0010A81D /* AnimationNonAnimal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationNonAnimal.swift; sourceTree = "<group>"; };
-		8DEE79851E99173A0010A81D /* GameSpriteNodeData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameSpriteNodeData.swift; path = Game/GameSpriteNodeData.swift; sourceTree = "<group>"; };
-		8DEE79871E99182E0010A81D /* GameState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameState.swift; path = Game/GameState.swift; sourceTree = "<group>"; };
 		8DEE79891E9918790010A81D /* Rect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Rect.swift; path = Utils/Rect.swift; sourceTree = "<group>"; };
 		8DEE798A1E9918790010A81D /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Timer.swift; path = Utils/Timer.swift; sourceTree = "<group>"; };
-		8DEE798B1E9918790010A81D /* Tool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tool.swift; path = Utils/Tool.swift; sourceTree = "<group>"; };
 		8DEE798C1E9918790010A81D /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Util.swift; path = Utils/Util.swift; sourceTree = "<group>"; };
-		8DEE79931E991B610010A81D /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameScene.swift; path = Game/GameScene.swift; sourceTree = "<group>"; };
-		8DEE79941E991B610010A81D /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameViewController.swift; path = Game/GameViewController.swift; sourceTree = "<group>"; };
-		8DEE79981E991F9E0010A81D /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		8DEE79941E991B610010A81D /* PssstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PssstViewController.swift; path = Game/PssstViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,15 +116,13 @@
 		8DEE79161E97C5820010A81D /* Pssst */ = {
 			isa = PBXGroup;
 			children = (
+				1E2233F81E9DA30D00ED81CF /* Crab.txt */,
 				8D7195D61E9B889A00612BD8 /* Misc.txt */,
 				8DEE793C1E9914DE0010A81D /* Animations */,
-				8DEE79371E9908980010A81D /* Enums */,
-				8DEE79971E991F9E0010A81D /* Extensions */,
 				8DEE79311E9905440010A81D /* Game */,
 				8DEE79341E99079C0010A81D /* Models */,
 				8DEE79301E9904FF0010A81D /* Utils */,
 				8DEE79171E97C5820010A81D /* AppDelegate.swift */,
-				8DEE791B1E97C5820010A81D /* Actions.sks */,
 				8DEE79211E97C5820010A81D /* Main.storyboard */,
 				8DEE79241E97C5820010A81D /* Assets.xcassets */,
 				8DEE79261E97C5820010A81D /* LaunchScreen.storyboard */,
@@ -182,7 +136,6 @@
 			children = (
 				8DEE79891E9918790010A81D /* Rect.swift */,
 				8DEE798A1E9918790010A81D /* Timer.swift */,
-				8DEE798B1E9918790010A81D /* Tool.swift */,
 				8DEE798C1E9918790010A81D /* Util.swift */,
 				8DEE797B1E9915190010A81D /* MathHelper.swift */,
 				8DEE793A1E9908D40010A81D /* RandomNumbers.swift */,
@@ -193,14 +146,9 @@
 		8DEE79311E9905440010A81D /* Game */ = {
 			isa = PBXGroup;
 			children = (
-				8DEE79931E991B610010A81D /* GameScene.swift */,
-				8DEE79941E991B610010A81D /* GameViewController.swift */,
-				8DEE79871E99182E0010A81D /* GameState.swift */,
-				8DEE79851E99173A0010A81D /* GameSpriteNodeData.swift */,
-				8DEE797F1E9915980010A81D /* GameSpriteNode.swift */,
-				8DEE797D1E99153C0010A81D /* GameDimensions.swift */,
-				8D7195CA1E9A693100612BD8 /* Game.swift */,
-				8D7195CC1E9A6B3300612BD8 /* Pssst.swift */,
+				1E42D55E1E9DB38800DE20EC /* PssstScene.swift */,
+				1E42D55F1E9DB38800DE20EC /* PssstScreen.swift */,
+				8DEE79941E991B610010A81D /* PssstViewController.swift */,
 			);
 			name = Game;
 			sourceTree = "<group>";
@@ -210,25 +158,13 @@
 			children = (
 				8DEE79351E99079C0010A81D /* LaneLim.swift */,
 				8D7195D21E9A903200612BD8 /* Shelf.swift */,
-				8D7195D41E9B877500612BD8 /* DeviceScreenFixpoints.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		8DEE79371E9908980010A81D /* Enums */ = {
-			isa = PBXGroup;
-			children = (
-				8DEE79381E9908980010A81D /* GameEnums.swift */,
-			);
-			path = Enums;
 			sourceTree = "<group>";
 		};
 		8DEE793C1E9914DE0010A81D /* Animations */ = {
 			isa = PBXGroup;
 			children = (
-				8DEE79811E9916FD0010A81D /* AnimationAnimal.swift */,
-				8DEE79821E9916FD0010A81D /* AnimationNonAnimal.swift */,
-				8DEE793D1E9914DE0010A81D /* AnimationBase.swift */,
 				8D7195C71E9A5AAA00612BD8 /* Background */,
 				8DEE793E1E9914DE0010A81D /* Bee */,
 				8DEE79411E9914DE0010A81D /* Box */,
@@ -248,7 +184,6 @@
 			isa = PBXGroup;
 			children = (
 				8DEE793F1E9914DE0010A81D /* Bee.atlas */,
-				8DEE79401E9914DE0010A81D /* BeeAnimation.swift */,
 			);
 			path = Bee;
 			sourceTree = "<group>";
@@ -257,7 +192,6 @@
 			isa = PBXGroup;
 			children = (
 				8DEE79421E9914DE0010A81D /* Box.atlas */,
-				8DEE79431E9914DE0010A81D /* BoxAnimation.swift */,
 			);
 			path = Box;
 			sourceTree = "<group>";
@@ -266,7 +200,6 @@
 			isa = PBXGroup;
 			children = (
 				8DEE79451E9914DE0010A81D /* Duster.atlas */,
-				8DEE79461E9914DE0010A81D /* DusterAnimation.swift */,
 			);
 			path = Duster;
 			sourceTree = "<group>";
@@ -275,7 +208,6 @@
 			isa = PBXGroup;
 			children = (
 				8DEE79481E9914DE0010A81D /* Flower.atlas */,
-				8DEE79491E9914DE0010A81D /* FlowerAnimation.swift */,
 			);
 			path = Flower;
 			sourceTree = "<group>";
@@ -284,7 +216,6 @@
 			isa = PBXGroup;
 			children = (
 				8DEE794B1E9914DE0010A81D /* Leaf.atlas */,
-				8DEE794C1E9914DE0010A81D /* LeafAnimation.swift */,
 			);
 			path = Leaf;
 			sourceTree = "<group>";
@@ -293,7 +224,6 @@
 			isa = PBXGroup;
 			children = (
 				8DEE794E1E9914DE0010A81D /* Owl.atlas */,
-				8DEE794F1E9914DE0010A81D /* OwlAnimation.swift */,
 			);
 			path = Owl;
 			sourceTree = "<group>";
@@ -301,7 +231,6 @@
 		8DEE79501E9914DE0010A81D /* SprayCan */ = {
 			isa = PBXGroup;
 			children = (
-				8DEE79511E9914DE0010A81D /* SprayCanAnimation.swift */,
 				8DEE79521E9914DE0010A81D /* SprayCanBlue.atlas */,
 				8DEE79531E9914DE0010A81D /* SprayCanRed.atlas */,
 				8DEE79541E9914DE0010A81D /* SprayCanYellow.atlas */,
@@ -313,7 +242,6 @@
 			isa = PBXGroup;
 			children = (
 				8DEE79561E9914DE0010A81D /* StartScreen.atlas */,
-				8DEE79571E9914DE0010A81D /* StartScreenAnimation.swift */,
 			);
 			path = StartScreen;
 			sourceTree = "<group>";
@@ -322,7 +250,6 @@
 			isa = PBXGroup;
 			children = (
 				8DEE79591E9914DE0010A81D /* WaterCan.atlas */,
-				8DEE795A1E9914DE0010A81D /* WaterCanAnimation.swift */,
 			);
 			path = WaterCan;
 			sourceTree = "<group>";
@@ -330,21 +257,12 @@
 		8DEE795B1E9914DE0010A81D /* Worm */ = {
 			isa = PBXGroup;
 			children = (
-				8DEE795C1E9914DE0010A81D /* WormAnimation.swift */,
 				8DEE795D1E9914DE0010A81D /* WormBlue.atlas */,
 				8DEE795E1E9914DE0010A81D /* WormGreen.atlas */,
 				8DEE795F1E9914DE0010A81D /* WormRed.atlas */,
 				8DEE79601E9914DE0010A81D /* WormYellow.atlas */,
 			);
 			path = Worm;
-			sourceTree = "<group>";
-		};
-		8DEE79971E991F9E0010A81D /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				8DEE79981E991F9E0010A81D /* Extensions.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -421,12 +339,12 @@
 				8DEE796C1E9914DE0010A81D /* Owl.atlas in Resources */,
 				8DEE79781E9914DE0010A81D /* WormGreen.atlas in Resources */,
 				8DEE797A1E9914DE0010A81D /* WormYellow.atlas in Resources */,
+				1E2233F91E9DA30D00ED81CF /* Crab.txt in Resources */,
 				8DEE796A1E9914DE0010A81D /* Leaf.atlas in Resources */,
 				8DEE79641E9914DE0010A81D /* Box.atlas in Resources */,
 				8DEE79771E9914DE0010A81D /* WormBlue.atlas in Resources */,
 				8DEE79661E9914DE0010A81D /* Duster.atlas in Resources */,
 				8DEE79681E9914DE0010A81D /* Flower.atlas in Resources */,
-				8DEE791C1E97C5820010A81D /* Actions.sks in Resources */,
 				8DEE79721E9914DE0010A81D /* StartScreen.atlas in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,38 +356,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DEE79841E9916FD0010A81D /* AnimationNonAnimal.swift in Sources */,
-				8DEE79831E9916FD0010A81D /* AnimationAnimal.swift in Sources */,
-				8DEE79631E9914DE0010A81D /* BeeAnimation.swift in Sources */,
-				8DEE79801E9915980010A81D /* GameSpriteNode.swift in Sources */,
-				8DEE796B1E9914DE0010A81D /* LeafAnimation.swift in Sources */,
+				1E42D5601E9DB38800DE20EC /* PssstScene.swift in Sources */,
 				8DEE797C1E9915190010A81D /* MathHelper.swift in Sources */,
-				8DEE79391E9908980010A81D /* GameEnums.swift in Sources */,
-				8DEE79671E9914DE0010A81D /* DusterAnimation.swift in Sources */,
-				8DEE79961E991B610010A81D /* GameViewController.swift in Sources */,
-				8DEE79761E9914DE0010A81D /* WormAnimation.swift in Sources */,
+				8DEE79961E991B610010A81D /* PssstViewController.swift in Sources */,
 				8DEE79901E9918790010A81D /* Util.swift in Sources */,
-				8DEE79651E9914DE0010A81D /* BoxAnimation.swift in Sources */,
-				8DEE79861E99173A0010A81D /* GameSpriteNodeData.swift in Sources */,
-				8DEE79751E9914DE0010A81D /* WaterCanAnimation.swift in Sources */,
 				8DEE793B1E9908D40010A81D /* RandomNumbers.swift in Sources */,
-				8DEE79691E9914DE0010A81D /* FlowerAnimation.swift in Sources */,
-				8DEE796E1E9914DE0010A81D /* SprayCanAnimation.swift in Sources */,
-				8D7195CB1E9A693100612BD8 /* Game.swift in Sources */,
+				1E42D5611E9DB38800DE20EC /* PssstScreen.swift in Sources */,
 				8DEE798E1E9918790010A81D /* Timer.swift in Sources */,
-				8DEE797E1E99153C0010A81D /* GameDimensions.swift in Sources */,
-				8DEE79611E9914DE0010A81D /* AnimationBase.swift in Sources */,
-				8DEE796D1E9914DE0010A81D /* OwlAnimation.swift in Sources */,
-				8DEE79731E9914DE0010A81D /* StartScreenAnimation.swift in Sources */,
-				8D7195CD1E9A6B3300612BD8 /* Pssst.swift in Sources */,
 				8D7195D31E9A903200612BD8 /* Shelf.swift in Sources */,
-				8DEE79881E99182E0010A81D /* GameState.swift in Sources */,
-				8D7195D51E9B877500612BD8 /* DeviceScreenFixpoints.swift in Sources */,
 				8DEE79361E99079C0010A81D /* LaneLim.swift in Sources */,
-				8DEE79991E991F9E0010A81D /* Extensions.swift in Sources */,
-				8DEE798F1E9918790010A81D /* Tool.swift in Sources */,
 				8DEE798D1E9918790010A81D /* Rect.swift in Sources */,
-				8DEE79951E991B610010A81D /* GameScene.swift in Sources */,
 				8DEE79181E97C5820010A81D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,13 +11,13 @@ import Foundation
 class LaneLim
 {
     var lane: Int
-    var animal: EAnimal
+    var animal: Int //EAnimal
     var min: Int
     var max: Int
     
     init(
         lane: Int,
-        animal: EAnimal,
+        animal: Int, //EAnimal,
         min: Int,
         max: Int)
     {

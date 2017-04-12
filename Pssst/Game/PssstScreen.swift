@@ -8,7 +8,7 @@
 
 import Foundation
 
-class DeviceScreenFixpoints
+class PssstScreen
 {
     /****************************************
      * Basic properties.                    *
