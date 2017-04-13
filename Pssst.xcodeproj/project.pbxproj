@@ -12,30 +12,15 @@
 		1E42D5611E9DB38800DE20EC /* PssstScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E42D55F1E9DB38800DE20EC /* PssstScreen.swift */; };
 		1E42D5631E9E375F00DE20EC /* PssstAnimals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E42D5621E9E375F00DE20EC /* PssstAnimals.swift */; };
 		1E42D5651E9E5E4E00DE20EC /* PssstSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E42D5641E9E5E4E00DE20EC /* PssstSprite.swift */; };
-		8D7195C91E9A5AAA00612BD8 /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D7195C81E9A5AAA00612BD8 /* Background.png */; };
 		8D7195D31E9A903200612BD8 /* Shelf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7195D21E9A903200612BD8 /* Shelf.swift */; };
 		8D7195D71E9B889A00612BD8 /* Misc.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8D7195D61E9B889A00612BD8 /* Misc.txt */; };
+		8DAAFB621E9F81BA008F9AB5 /* WormGreen.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8DAAFB611E9F81BA008F9AB5 /* WormGreen.atlas */; };
 		8DEE79181E97C5820010A81D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE79171E97C5820010A81D /* AppDelegate.swift */; };
 		8DEE79231E97C5820010A81D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DEE79211E97C5820010A81D /* Main.storyboard */; };
 		8DEE79251E97C5820010A81D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DEE79241E97C5820010A81D /* Assets.xcassets */; };
 		8DEE79281E97C5820010A81D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DEE79261E97C5820010A81D /* LaunchScreen.storyboard */; };
 		8DEE79361E99079C0010A81D /* LaneLim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE79351E99079C0010A81D /* LaneLim.swift */; };
 		8DEE793B1E9908D40010A81D /* RandomNumbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE793A1E9908D40010A81D /* RandomNumbers.swift */; };
-		8DEE79621E9914DE0010A81D /* Bee.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8DEE793F1E9914DE0010A81D /* Bee.atlas */; };
-		8DEE79641E9914DE0010A81D /* Box.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8DEE79421E9914DE0010A81D /* Box.atlas */; };
-		8DEE79661E9914DE0010A81D /* Duster.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8DEE79451E9914DE0010A81D /* Duster.atlas */; };
-		8DEE79681E9914DE0010A81D /* Flower.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8DEE79481E9914DE0010A81D /* Flower.atlas */; };
-		8DEE796A1E9914DE0010A81D /* Leaf.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8DEE794B1E9914DE0010A81D /* Leaf.atlas */; };
-		8DEE796C1E9914DE0010A81D /* Owl.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8DEE794E1E9914DE0010A81D /* Owl.atlas */; };
-		8DEE796F1E9914DE0010A81D /* SprayCanBlue.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8DEE79521E9914DE0010A81D /* SprayCanBlue.atlas */; };
-		8DEE79701E9914DE0010A81D /* SprayCanRed.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8DEE79531E9914DE0010A81D /* SprayCanRed.atlas */; };
-		8DEE79711E9914DE0010A81D /* SprayCanYellow.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8DEE79541E9914DE0010A81D /* SprayCanYellow.atlas */; };
-		8DEE79721E9914DE0010A81D /* StartScreen.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8DEE79561E9914DE0010A81D /* StartScreen.atlas */; };
-		8DEE79741E9914DE0010A81D /* WaterCan.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8DEE79591E9914DE0010A81D /* WaterCan.atlas */; };
-		8DEE79771E9914DE0010A81D /* WormBlue.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8DEE795D1E9914DE0010A81D /* WormBlue.atlas */; };
-		8DEE79781E9914DE0010A81D /* WormGreen.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8DEE795E1E9914DE0010A81D /* WormGreen.atlas */; };
-		8DEE79791E9914DE0010A81D /* WormRed.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8DEE795F1E9914DE0010A81D /* WormRed.atlas */; };
-		8DEE797A1E9914DE0010A81D /* WormYellow.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8DEE79601E9914DE0010A81D /* WormYellow.atlas */; };
 		8DEE797C1E9915190010A81D /* MathHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE797B1E9915190010A81D /* MathHelper.swift */; };
 		8DEE798D1E9918790010A81D /* Rect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE79891E9918790010A81D /* Rect.swift */; };
 		8DEE798E1E9918790010A81D /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE798A1E9918790010A81D /* Timer.swift */; };
@@ -49,9 +34,9 @@
 		1E42D55F1E9DB38800DE20EC /* PssstScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PssstScreen.swift; path = Game/PssstScreen.swift; sourceTree = "<group>"; };
 		1E42D5621E9E375F00DE20EC /* PssstAnimals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PssstAnimals.swift; path = Game/PssstAnimals.swift; sourceTree = "<group>"; };
 		1E42D5641E9E5E4E00DE20EC /* PssstSprite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PssstSprite.swift; path = Game/PssstSprite.swift; sourceTree = "<group>"; };
-		8D7195C81E9A5AAA00612BD8 /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background.png; sourceTree = "<group>"; };
 		8D7195D21E9A903200612BD8 /* Shelf.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shelf.swift; sourceTree = "<group>"; };
 		8D7195D61E9B889A00612BD8 /* Misc.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Misc.txt; sourceTree = "<group>"; };
+		8DAAFB611E9F81BA008F9AB5 /* WormGreen.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = WormGreen.atlas; path = Pssst/Animations/Worm/WormGreen.atlas; sourceTree = "<group>"; };
 		8DEE79141E97C5820010A81D /* Pssst.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pssst.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DEE79171E97C5820010A81D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DEE79221E97C5820010A81D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -60,21 +45,6 @@
 		8DEE79291E97C5820010A81D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DEE79351E99079C0010A81D /* LaneLim.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaneLim.swift; sourceTree = "<group>"; };
 		8DEE793A1E9908D40010A81D /* RandomNumbers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RandomNumbers.swift; path = Utils/RandomNumbers.swift; sourceTree = "<group>"; };
-		8DEE793F1E9914DE0010A81D /* Bee.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Bee.atlas; sourceTree = "<group>"; };
-		8DEE79421E9914DE0010A81D /* Box.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Box.atlas; sourceTree = "<group>"; };
-		8DEE79451E9914DE0010A81D /* Duster.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Duster.atlas; sourceTree = "<group>"; };
-		8DEE79481E9914DE0010A81D /* Flower.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Flower.atlas; sourceTree = "<group>"; };
-		8DEE794B1E9914DE0010A81D /* Leaf.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Leaf.atlas; sourceTree = "<group>"; };
-		8DEE794E1E9914DE0010A81D /* Owl.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Owl.atlas; sourceTree = "<group>"; };
-		8DEE79521E9914DE0010A81D /* SprayCanBlue.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = SprayCanBlue.atlas; sourceTree = "<group>"; };
-		8DEE79531E9914DE0010A81D /* SprayCanRed.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = SprayCanRed.atlas; sourceTree = "<group>"; };
-		8DEE79541E9914DE0010A81D /* SprayCanYellow.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = SprayCanYellow.atlas; sourceTree = "<group>"; };
-		8DEE79561E9914DE0010A81D /* StartScreen.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = StartScreen.atlas; sourceTree = "<group>"; };
-		8DEE79591E9914DE0010A81D /* WaterCan.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = WaterCan.atlas; sourceTree = "<group>"; };
-		8DEE795D1E9914DE0010A81D /* WormBlue.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = WormBlue.atlas; sourceTree = "<group>"; };
-		8DEE795E1E9914DE0010A81D /* WormGreen.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = WormGreen.atlas; sourceTree = "<group>"; };
-		8DEE795F1E9914DE0010A81D /* WormRed.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = WormRed.atlas; sourceTree = "<group>"; };
-		8DEE79601E9914DE0010A81D /* WormYellow.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = WormYellow.atlas; sourceTree = "<group>"; };
 		8DEE797B1E9915190010A81D /* MathHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MathHelper.swift; path = Utils/MathHelper.swift; sourceTree = "<group>"; };
 		8DEE79891E9918790010A81D /* Rect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Rect.swift; path = Utils/Rect.swift; sourceTree = "<group>"; };
 		8DEE798A1E9918790010A81D /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Timer.swift; path = Utils/Timer.swift; sourceTree = "<group>"; };
@@ -93,17 +63,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8D7195C71E9A5AAA00612BD8 /* Background */ = {
-			isa = PBXGroup;
-			children = (
-				8D7195C81E9A5AAA00612BD8 /* Background.png */,
-			);
-			path = Background;
-			sourceTree = "<group>";
-		};
 		8DEE790B1E97C5820010A81D = {
 			isa = PBXGroup;
 			children = (
+				8DAAFB611E9F81BA008F9AB5 /* WormGreen.atlas */,
 				8DEE79161E97C5820010A81D /* Pssst */,
 				8DEE79151E97C5820010A81D /* Products */,
 			);
@@ -122,7 +85,6 @@
 			children = (
 				1E2233F81E9DA30D00ED81CF /* Crab.txt */,
 				8D7195D61E9B889A00612BD8 /* Misc.txt */,
-				8DEE793C1E9914DE0010A81D /* Animations */,
 				8DEE79311E9905440010A81D /* Game */,
 				8DEE79341E99079C0010A81D /* Models */,
 				8DEE79301E9904FF0010A81D /* Utils */,
@@ -166,109 +128,6 @@
 				8D7195D21E9A903200612BD8 /* Shelf.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		8DEE793C1E9914DE0010A81D /* Animations */ = {
-			isa = PBXGroup;
-			children = (
-				8D7195C71E9A5AAA00612BD8 /* Background */,
-				8DEE793E1E9914DE0010A81D /* Bee */,
-				8DEE79411E9914DE0010A81D /* Box */,
-				8DEE79441E9914DE0010A81D /* Duster */,
-				8DEE79471E9914DE0010A81D /* Flower */,
-				8DEE794A1E9914DE0010A81D /* Leaf */,
-				8DEE794D1E9914DE0010A81D /* Owl */,
-				8DEE79501E9914DE0010A81D /* SprayCan */,
-				8DEE79551E9914DE0010A81D /* StartScreen */,
-				8DEE79581E9914DE0010A81D /* WaterCan */,
-				8DEE795B1E9914DE0010A81D /* Worm */,
-			);
-			path = Animations;
-			sourceTree = "<group>";
-		};
-		8DEE793E1E9914DE0010A81D /* Bee */ = {
-			isa = PBXGroup;
-			children = (
-				8DEE793F1E9914DE0010A81D /* Bee.atlas */,
-			);
-			path = Bee;
-			sourceTree = "<group>";
-		};
-		8DEE79411E9914DE0010A81D /* Box */ = {
-			isa = PBXGroup;
-			children = (
-				8DEE79421E9914DE0010A81D /* Box.atlas */,
-			);
-			path = Box;
-			sourceTree = "<group>";
-		};
-		8DEE79441E9914DE0010A81D /* Duster */ = {
-			isa = PBXGroup;
-			children = (
-				8DEE79451E9914DE0010A81D /* Duster.atlas */,
-			);
-			path = Duster;
-			sourceTree = "<group>";
-		};
-		8DEE79471E9914DE0010A81D /* Flower */ = {
-			isa = PBXGroup;
-			children = (
-				8DEE79481E9914DE0010A81D /* Flower.atlas */,
-			);
-			path = Flower;
-			sourceTree = "<group>";
-		};
-		8DEE794A1E9914DE0010A81D /* Leaf */ = {
-			isa = PBXGroup;
-			children = (
-				8DEE794B1E9914DE0010A81D /* Leaf.atlas */,
-			);
-			path = Leaf;
-			sourceTree = "<group>";
-		};
-		8DEE794D1E9914DE0010A81D /* Owl */ = {
-			isa = PBXGroup;
-			children = (
-				8DEE794E1E9914DE0010A81D /* Owl.atlas */,
-			);
-			path = Owl;
-			sourceTree = "<group>";
-		};
-		8DEE79501E9914DE0010A81D /* SprayCan */ = {
-			isa = PBXGroup;
-			children = (
-				8DEE79521E9914DE0010A81D /* SprayCanBlue.atlas */,
-				8DEE79531E9914DE0010A81D /* SprayCanRed.atlas */,
-				8DEE79541E9914DE0010A81D /* SprayCanYellow.atlas */,
-			);
-			path = SprayCan;
-			sourceTree = "<group>";
-		};
-		8DEE79551E9914DE0010A81D /* StartScreen */ = {
-			isa = PBXGroup;
-			children = (
-				8DEE79561E9914DE0010A81D /* StartScreen.atlas */,
-			);
-			path = StartScreen;
-			sourceTree = "<group>";
-		};
-		8DEE79581E9914DE0010A81D /* WaterCan */ = {
-			isa = PBXGroup;
-			children = (
-				8DEE79591E9914DE0010A81D /* WaterCan.atlas */,
-			);
-			path = WaterCan;
-			sourceTree = "<group>";
-		};
-		8DEE795B1E9914DE0010A81D /* Worm */ = {
-			isa = PBXGroup;
-			children = (
-				8DEE795D1E9914DE0010A81D /* WormBlue.atlas */,
-				8DEE795E1E9914DE0010A81D /* WormGreen.atlas */,
-				8DEE795F1E9914DE0010A81D /* WormRed.atlas */,
-				8DEE79601E9914DE0010A81D /* WormYellow.atlas */,
-			);
-			path = Worm;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,26 +191,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DEE79231E97C5820010A81D /* Main.storyboard in Resources */,
-				8DEE796F1E9914DE0010A81D /* SprayCanBlue.atlas in Resources */,
-				8D7195C91E9A5AAA00612BD8 /* Background.png in Resources */,
-				8DEE79701E9914DE0010A81D /* SprayCanRed.atlas in Resources */,
 				8DEE79251E97C5820010A81D /* Assets.xcassets in Resources */,
 				8D7195D71E9B889A00612BD8 /* Misc.txt in Resources */,
 				8DEE79281E97C5820010A81D /* LaunchScreen.storyboard in Resources */,
-				8DEE79741E9914DE0010A81D /* WaterCan.atlas in Resources */,
-				8DEE79791E9914DE0010A81D /* WormRed.atlas in Resources */,
-				8DEE79711E9914DE0010A81D /* SprayCanYellow.atlas in Resources */,
-				8DEE79621E9914DE0010A81D /* Bee.atlas in Resources */,
-				8DEE796C1E9914DE0010A81D /* Owl.atlas in Resources */,
-				8DEE79781E9914DE0010A81D /* WormGreen.atlas in Resources */,
-				8DEE797A1E9914DE0010A81D /* WormYellow.atlas in Resources */,
+				8DAAFB621E9F81BA008F9AB5 /* WormGreen.atlas in Resources */,
 				1E2233F91E9DA30D00ED81CF /* Crab.txt in Resources */,
-				8DEE796A1E9914DE0010A81D /* Leaf.atlas in Resources */,
-				8DEE79641E9914DE0010A81D /* Box.atlas in Resources */,
-				8DEE79771E9914DE0010A81D /* WormBlue.atlas in Resources */,
-				8DEE79661E9914DE0010A81D /* Duster.atlas in Resources */,
-				8DEE79681E9914DE0010A81D /* Flower.atlas in Resources */,
-				8DEE79721E9914DE0010A81D /* StartScreen.atlas in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

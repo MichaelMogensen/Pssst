@@ -46,3 +46,61 @@ return backgroundSprite
 }
 
 
+NOT WORKING:
+
+/*
+func TryLoadAtlas() throws -> SKTextureAtlas?
+{
+return SKTextureAtlas(named: atlasName)
+}
+
+let textureAtlas: SKTextureAtlas?
+do
+{
+textureAtlas = try TryLoadAtlas()
+}
+catch
+{
+textureAtlas = nil
+}
+
+// Got atlas?
+if (textureAtlas == nil)
+{ return }
+
+// Now load frames from it one by one.
+var sprite = PssstSprite()
+let count = textureAtlas!.textureNames.count
+for frameNo in 0..<count
+{
+let frameId = frameFromId + frameNo * frameStep
+let textureName = "\(atlasName)\(frameId)"
+let frame = textureAtlas?.textureNamed(textureName)
+if (frameNo == 0)
+{
+sprite = PssstSprite(texture: frame)
+sprite.frames = []
+}
+sprite.frames.append(frame!)
+}
+sprite.name = name
+sprite.position = CGPoint(
+x: x,
+y: y)
+if (width > -1 && height > -1)
+{
+sprite.size = CGSize(
+width: width,
+height: height)
+}
+addChild(sprite)
+
+let actionMove = SKAction.animate(
+with: sprite.frames,
+timePerFrame: 0.2,
+resize: true,
+restore: true)
+let actionMoveForever = SKAction.repeatForever(actionMove)
+sprite.run(actionMoveForever, withKey:"WormMove")
+*/
+

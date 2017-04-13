@@ -11,6 +11,6 @@ import SpriteKit
 
 class PssstSprite : SKSpriteNode
 {
-    var frames: [SKTexture]! = nil
+    var atlas: [SKTexture]! = nil
 }
 
