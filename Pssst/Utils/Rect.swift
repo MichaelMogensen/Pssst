@@ -19,19 +19,12 @@ class Rect
     var Width: Int { get { return (right - left) } }
     var Height: Int { get { return (top - bottom) } }
     
-    init(left: Int, top: Int, right: Int, bottom: Int)
+    init(_ left: Int, _ top: Int, _ right: Int, _ bottom: Int)
     {
         self.left = left
         self.top = top
         self.right = right
         self.bottom = bottom
-    }
-    // Return random point within rect.
-    func RandomPointWithin() -> CGPoint
-    {
-        let x = RandomNumbers.RandomInt(left, right)
-        let y = RandomNumbers.RandomInt(bottom, top)
-        return CGPoint(x: x, y: y)
     }
 }
 

@@ -13,9 +13,15 @@ class RandomNumbers
     // Return random int in [min; max].
     class func RandomInt(_ min: Int, _ max: Int) -> Int
     {
-        var value = max - min + 1
+        var min_ = min
+        var max_ = max
+        if (min_ > max_)
+        { MathHelper.Swop(&min_, &max_) }
+        var value = max_ - min_ + 1
         value = value >= 0 ? value : 0
-        return min + Int(arc4random_uniform(UInt32(value)))
+        let random = min_ + Int(arc4random_uniform(UInt32(value)))
+        
+        return random
     }
     // Return random int in [min; max].
     class func RandomIntEvenSpaced(_ min: Int, max: Int, neighbourValues: [Int], minDistance: Int) -> Int
@@ -44,7 +50,7 @@ class RandomNumbers
         return newRandomInt
     }
     // Return n different random int's in [min; max].
-    class func RandomDifferentInts(_ numberOfDifferentRandomNumbers: Int, min: Int, max: Int) -> [Int]!
+    class func RandomDifferentInts(_ numberOfDifferentRandomNumbers: Int, _ min: Int, _ max: Int) -> [Int]!
     {
         let range = max - min
         if (numberOfDifferentRandomNumbers > range)
@@ -65,6 +71,7 @@ class RandomNumbers
                 uniqueRandomNumber = RandomNumbers.RandomInt(min, max)
             }
             while(diffRandomNumbers.contains(uniqueRandomNumber))
+            
             return uniqueRandomNumber
         }
         
@@ -82,12 +89,14 @@ class RandomNumbers
     class func FiftyFifty() -> Bool
     {
         let diceWith2Sides = RandomInt(0, 100)
+        
         return diceWith2Sides > 50
     }
     // Return [0; 5] in 100/6% chance.
     class func RollDice() -> Int
     {
         let diceWith6Sides = RandomInt(0, 5)
+        
         return diceWith6Sides
     }
 }

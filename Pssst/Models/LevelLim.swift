@@ -8,20 +8,20 @@
 
 import Foundation
 
-class LaneLim
+class LevelLim
 {
-    var lane: Int
-    var animal: Int //EAnimal
+    var level: Int
+    var animal: EPssstAnimals
     var min: Int
     var max: Int
     
     init(
-        lane: Int,
-        animal: Int, //EAnimal,
+        level: Int,
+        animal: EPssstAnimals,
         min: Int,
         max: Int)
     {
-        self.lane = lane
+        self.level = level
         self.animal = animal
         self.min = min
         self.max = max

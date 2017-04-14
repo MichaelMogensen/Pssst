@@ -29,9 +29,16 @@ class PssstScreen
     var ShelfHeight = 0
     var ShelfWidth = 0
     
-    var NonAnimalMargin = Rect(left: 0, top: 0, right: 0, bottom: 0)
+    var NonAnimalMargin = Rect(0, 0, 0, 0)
     var Animalδy = 0
 
+    var GameBox: Rect
+    { get { return Rect(
+        NonAnimalMargin.left,
+        NonAnimalMargin.top,
+        Width - NonAnimalMargin.right,
+        Height - NonAnimalMargin.bottom) } }
+    
     /****************************************
      * Exposed methods.                     *
      ****************************************/
@@ -75,7 +82,7 @@ class PssstScreen
         self.Width = width
         self.Height = height
 
-        // Setup empty shelfs for current screen.
+        // Setup shelfs positions for current screen.
         self.Shelfs.removeAll()
         for xid in 0..<shelfXPosPct.count
         {
@@ -97,12 +104,35 @@ class PssstScreen
         self.ShelfWidth = Int(Double(self.Width) * ShelfWidthPct)
         
         self.NonAnimalMargin = Rect(
-            left:   Int(Double(self.Width) * NonAnimalMarginLeftPct),
-            top:    Int(Double(self.Height) * NonAnimalMarginTopPct),
-            right:  Int(Double(self.Width) * NonAnimalMarginRightPct),
-            bottom: Int(Double(self.Height) * NonAnimalMarginBottomPct))
+            Int(Double(self.Width) * NonAnimalMarginLeftPct),
+            Int(Double(self.Height) * NonAnimalMarginTopPct),
+            Int(Double(self.Width) * NonAnimalMarginRightPct),
+            Int(Double(self.Height) * NonAnimalMarginBottomPct))
         
         self.Animalδy = Int(Double(self.Height) * AnimalδyPct)
+    }
+    
+    // Empty all shelfs.
+    func EmptyShelfs()
+    {
+        for id in 0..<self.Shelfs.count
+        { EmptyShelf(id) }
+    }
+    
+    // Empty shelf.
+    func EmptyShelf(_ id: Int)
+    {
+        let s = self.Shelfs[id]!
+        s.IsOccupied = false
+        self.Shelfs.updateValue(s, forKey: id)
+    }
+    
+    // Occupy shelf.
+    func OccupyShelf(_ id: Int)
+    {
+        let s = self.Shelfs[id]!
+        s.IsOccupied = true
+        self.Shelfs.updateValue(s, forKey: id)
     }
 }
 

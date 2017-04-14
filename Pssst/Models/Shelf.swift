@@ -11,7 +11,7 @@ import Foundation
 class Shelf
 {
     private var ToolPos = (0, 0)
-    private var IsOccupied = false
+    var IsOccupied = false
     
     init(_ xToolPos: Int, _ yToolPos: Int, _ isOccupied: Bool)
     {

@@ -104,3 +104,74 @@ let actionMoveForever = SKAction.repeatForever(actionMove)
 sprite.run(actionMoveForever, withKey:"WormMove")
 */
 
+WORKING:
+
+//        let newPoint1 = CGPoint(x: CGFloat(200), y: CGFloat(200))
+//        let newPoint2 = CGPoint(x: CGFloat(300), y: CGFloat(100))
+//
+//        let action1 = SKAction.move(to: newPoint1, duration: 3.0)
+//        let action2 = SKAction.move(to: newPoint2, duration: 5.0)
+//
+//        let actions = [ action1, action2 ]
+//
+//        let action = SKAction.sequence(actions)
+//
+//
+//        sprite.run(action)
+
+
+
+// On touch began for 1..N fingers.
+private func OnTouchesBegan(_ touch: UITouch)
+{
+//        let location = touch.location(in: self)
+//
+//        Util.Log("Begin location = (\(location.x), \(location.y))")
+}
+// On touch has moved for 1..N fingers.
+private func OnTouchesMoved(_ touch: UITouch)
+{
+//        let location = touch.location(in: self)
+//
+//        Util.Log("Moved location = (\(location.x), \(location.y))")
+}
+// On touch has ended for 1..N fingers.
+private func OnTouchesEnded(_ touch: UITouch)
+{
+//        let location = touch.location(in: self)
+//
+//        Util.Log("End location = (\(location.x), \(location.y))")
+}
+// On touch has cancelled for 1..N fingers.
+private func OnTouchesCancelled(_ touch: UITouch)
+{
+//        let location = touch.location(in: self)
+//
+//        Util.Log("Cancel location = (\(location.x), \(location.y))")
+}
+
+
+// Move existing sprite to new place.
+private func MoveSprite(
+_ sprite: PssstSprite,
+_ newX: Int,
+_ newY: Int)
+{
+let newPoint = CGPoint(x: CGFloat(newX), y: CGFloat(newY))
+let action = SKAction.move(to: newPoint, duration: 5.0)
+sprite.run(action)
+}
+
+
+
+
+
+
+
+let dummyHandler = {(arg: Int) -> Void in
+// NOP
+}
+
+
+
+

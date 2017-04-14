@@ -40,28 +40,32 @@ class PssstScene : SKScene
     /****************************************
      * Basic static properties              *
      ****************************************/
-        
-/*
-    static private let laneLim =
+    
+    static private let levelLims =
     [
-        LaneLim(lane: 1, animal: EAnimal.worm,   min: 3, max: 10),
-        LaneLim(lane: 1, animal: EAnimal.duster, min: 0, max: 0),
-        LaneLim(lane: 1, animal: EAnimal.bee,    min: 0, max: 0),
+        LevelLim(level: 1, animal: EPssstAnimals.Worm,   min: 3, max: 10),
+        LevelLim(level: 1, animal: EPssstAnimals.Duster, min: 0, max: 0),
+        LevelLim(level: 1, animal: EPssstAnimals.Bee,    min: 0, max: 0),
         
-        LaneLim(lane: 2, animal: EAnimal.worm,   min: 3, max: 20),
-        LaneLim(lane: 2, animal: EAnimal.duster, min: 3, max: 6),
-        LaneLim(lane: 2, animal: EAnimal.bee,    min: 0, max: 0),
+        LevelLim(level: 2, animal: EPssstAnimals.Worm,   min: 3, max: 20),
+        LevelLim(level: 2, animal: EPssstAnimals.Duster, min: 3, max: 6),
+        LevelLim(level: 2, animal: EPssstAnimals.Bee,    min: 0, max: 0),
         
-        LaneLim(lane: 3, animal: EAnimal.worm,   min: 3, max: 30),
-        LaneLim(lane: 3, animal: EAnimal.duster, min: 3, max: 6),
-        LaneLim(lane: 3, animal: EAnimal.bee,    min: 3, max: 6)
+        LevelLim(level: 3, animal: EPssstAnimals.Worm,   min: 3, max: 30),
+        LevelLim(level: 3, animal: EPssstAnimals.Duster, min: 3, max: 6),
+        LevelLim(level: 3, animal: EPssstAnimals.Bee,    min: 3, max: 6)
     ]
-*/
+
     /****************************************
      * Basic properties.                    *
      ****************************************/
     
+    private let Debug = true
+    
     private var Screen: PssstScreen?
+    private var Timer: NSecondsTimer?
+    private var Level = 1
+    private var Lives = 3
     
     /****************************************
      * Init.                                *
@@ -73,6 +77,8 @@ class PssstScene : SKScene
         
         // Set to current screen.
         self.Screen = PssstScreen(Int(size.width), Int(size.height))
+        //self.Timer = nil
+        self.Timer = NSecondsTimer(1, OnTimeout)
         
         BeginGame()
     }
@@ -81,6 +87,22 @@ class PssstScene : SKScene
         fatalError("init(coder:) has not been implemented")
     }
 
+    deinit
+    {
+        EndGame()
+    }
+
+    /****************************************
+     * Debug methods.                       *
+     ****************************************/
+
+    func PrintAllAnimals()
+    {
+        let animals = "..."
+        
+        Util.Log(animals)
+    }
+    
     /****************************************
      * Internal methods.                    *
      ****************************************/
@@ -89,28 +111,23 @@ class PssstScene : SKScene
     func BeginGame()
     {
         // Build game scene.
-        removeAllChildren()
-        _ = AddSprite(
-            EPssstAnimals.Background.Name,
-            Screen!.Width / 2,
-            Screen!.Height / 2,
-            Screen!.Width,
-            Screen!.Height)
-
-        
-        let sprite = AddSpriteAlive("WormGreen", 100, 100)
-        MoveSprite(sprite: sprite)
-        MoveSpriteTo(sprite, 200, 200)
+        Level = 1
+        Lives = 3
+        CleanScene()
+        PlaceSprayCans()
+        StartTimer()
     }
-    
+
     // Continue game.
     func ProceedGame()
     {
+        BringInTheAnimals()
     }
     
     // End game.
     func EndGame()
     {
+        StopTimer()
     }
     
     /****************************************
@@ -131,18 +148,203 @@ class PssstScene : SKScene
     }
 
     /****************************************
-     * Helper methods.                      *
+     * Calc. methods.                       *
+     ****************************************/
+
+    private func SelectRandomColor() -> EPssstColors
+    {
+        let randomNumber = RandomNumbers.RandomInt(0, EPssstColors.count - 1)
+        return EPssstColors(rawValue: randomNumber)!
+    }
+
+    private func SelectRandomSide() -> EPssstSides
+    {
+        let randomNumber = RandomNumbers.RandomInt(0, EPssstSides.count - 1)
+        return EPssstSides(rawValue: randomNumber)!
+    }
+    
+    private func SelectRandomSidePoint(side: EPssstSides) -> Point
+    {
+        let randomPoint = Point()
+        
+        let gameBox = (self.Screen?.GameBox)!
+        randomPoint.x = (side == EPssstSides.Left ?
+            self.Screen?.GameBox.left :
+            self.Screen?.GameBox.right)!
+        randomPoint.y = RandomNumbers.RandomInt(
+            gameBox.bottom,
+            gameBox.top)
+        
+        return randomPoint
+    }
+    
+    private func SelectRandomZigZigPath(
+        _ from: Point,
+        _ to: Point,
+        _ durationPerMove: TimeInterval) -> [Move]
+    {
+        let path =
+        [
+            Move(RandomNumbers.RandomInt(100, 200), RandomNumbers.RandomInt(100,200), 10.0)
+//            Move(100, 200, 2.0),
+//            Move(200, 200, 1.0),
+//            Move(200, 100, 2.0),
+//            Move(100, 100, 1.0)
+        ]
+        return path
+    }
+    
+    /****************************************
+     * Game logic methods.                  *
+     ****************************************/
+    
+    // Add yet another animal.
+    private func AddAnimal()
+    {
+    }
+
+    // Add some random bees.
+    private func AddBees(_ count: Int)
+    {
+        if (count < 1)
+        { return }
+    }
+
+    // Add some random dusters.
+    private func AddDusters(_ count: Int)
+    {
+        if (count < 1)
+        { return }
+    }
+
+    // Add some random worms.
+    private func AddWorms(_ count: Int)
+    {
+        if (count < 1)
+        { return }
+        
+        for _ in 1...count
+        {
+            let randomColor = SelectRandomColor()
+            let randomSide = SelectRandomSide()
+            let randomStartPoint = SelectRandomSidePoint(side: randomSide)
+            let randomZigZagPath = SelectRandomZigZigPath(Point(0, 0), Point(0, 0), 10.0)
+            
+            let worm = AddSpriteAlive(EPssstAnimals.Worm, randomColor, randomStartPoint)
+            MoveSprite(worm)
+            MoveSpriteAround(worm, randomZigZagPath)
+            
+            Util.Log(randomStartPoint.y)
+        }
+    }
+
+    // Bring in animals according to the level.
+    private func BringInTheAnimals()
+    {
+        let levelLimWorms = GetLevelLim(EPssstAnimals.Worm)!
+        let levelLimDusters = GetLevelLim(EPssstAnimals.Duster)!
+        let levelLimBees = GetLevelLim(EPssstAnimals.Bee)!
+        
+        let wormCount = GetAnimalCount(EPssstAnimals.Worm)
+        let dusterCount = GetAnimalCount(EPssstAnimals.Duster)
+        let beeCount = GetAnimalCount(EPssstAnimals.Bee)
+        
+        let newWorms = 1 //wormCount < levelLimWorms.min ? levelLimWorms.min : wormCount < levelLimWorms.max ? 1 : 0
+        let newDusters = dusterCount < levelLimDusters.min ? levelLimDusters.min : dusterCount < levelLimDusters.max ? 1 : 0
+        let newBees = beeCount < levelLimBees.min ? levelLimBees.min : beeCount < levelLimBees.max ? 1 : 0
+        
+        AddWorms(newWorms)
+        AddDusters(newDusters)
+        AddBees(newBees)
+    }
+    
+    // Wipe all.
+    private func CleanScene()
+    {
+        removeAllChildren()
+        _ = AddSprite(
+            EPssstAnimals.Background.Name,
+            EPssstAnimals.Background.Name,
+            Screen!.Width / 2,
+            Screen!.Height / 2,
+            Screen!.Width,
+            Screen!.Height)
+        self.Screen!.EmptyShelfs()
+    }
+
+    // Return count of specific animal - like "Worm".
+    private func GetAnimalCount(_ animal: EPssstAnimals) -> Int
+    {
+        let sprites = LookupSprites(animal.Name.description)
+        if let s = sprites
+        {
+            return s.count
+        }
+        
+        return 0
+    }
+    
+    // Return level limits for level/animal.
+    func GetLevelLim(_ animal: EPssstAnimals) -> LevelLim?
+    {
+        for levelLim in PssstScene.levelLims
+        {
+            if (levelLim.level == self.Level && levelLim.animal == animal)
+            { return levelLim }
+        }
+        
+        return nil
+    }
+    
+    // Place spray tools.
+    private func PlaceSprayCans()
+    {
+        
+    }
+
+    // Place box.
+    private func PlacePointBox()
+    {
+        
+    }
+
+    /****************************************
+     * Timer methods.                       *
+     ****************************************/
+
+    // Start timer.
+    private func StartTimer()
+    {
+        self.Timer!.Start()
+    }
+
+    // Stop timer.
+    private func StopTimer()
+    {
+        self.Timer!.Stop()
+    }
+
+    // On timeout.
+    private func OnTimeout(tickCount: Int)
+    {
+//        Util.Log("tickCount = (\(tickCount))")
+        ProceedGame()
+    }
+    
+    /****************************************
+     * Sprite methods.                      *
      ****************************************/
 
     // Add new sprite.
     private func AddSprite(
-        _ name: String?,
+        _ name: String,
+        _ nameImage: String?,
         _ x: Int,
         _ y: Int,
         _ width: Int,
         _ height: Int) -> PssstSprite
     {
-        let sprite = name == nil ? PssstSprite() : PssstSprite(imageNamed: name!)
+        let sprite = nameImage == nil ? PssstSprite() : PssstSprite(imageNamed: nameImage!)
         sprite.name = name
         sprite.position = CGPoint(
             x: x,
@@ -158,14 +360,29 @@ class PssstScene : SKScene
     // Add new sprite with atlas.
     private func AddSpriteAlive(
         _ name: String,
-        _ x: Int,
-        _ y: Int) -> PssstSprite
+        _ nameAtlas: String,
+        _ startPoint: Point) -> PssstSprite
     {
-        let atlas = LoadAtlas(name)
-        let sprite = AddSprite(nil, x, y, Int(atlas[0].size().width), Int(atlas[0].size().height))
+        let atlas = LoadAtlas(nameAtlas)
+        let sprite = AddSprite(name, nil, startPoint.x, startPoint.y, Int(atlas[0].size().width), Int(atlas[0].size().height))
         sprite.atlas = atlas
         
         return sprite
+    }
+
+    // Add new sprite with atlas. Based on enum's.
+    private func AddSpriteAlive(
+        _ animal: EPssstAnimals,
+        _ color: EPssstColors,
+        _ startPoint: Point) -> PssstSprite
+    {
+        let name = animal.Name
+        let nameAtlas = "\(animal.Name)\(color.Name)"
+        
+        return AddSpriteAlive(
+            name,
+            nameAtlas,
+            startPoint)
     }
     
     // Return texture array from atlas.
@@ -180,6 +397,7 @@ class PssstScene : SKScene
             let textureName = "\(name)\(id).png"
             textures.append(atlas.textureNamed(textureName))
         }
+        
         return textures
     }
     
@@ -195,11 +413,12 @@ class PssstScene : SKScene
             return false
         }
         let spritesFound = children.filter(FindFromName) as! [PssstSprite]
+        
         return spritesFound.count == 1 ? spritesFound.first : nil
     }
 
     // Return sprite by name when more sprites are expected to be found.
-    private func LookupSprites(_ name: String) -> [PssstSprite?]
+    private func LookupSprites(_ name: String) -> [PssstSprite]?
     {
         func FindFromName(_ object: AnyObject) -> Bool
         {
@@ -210,37 +429,33 @@ class PssstScene : SKScene
             return false
         }
         let spritesFound = children.filter(FindFromName) as! [PssstSprite]
+        
         return spritesFound
     }
     
-    // Move existing sprite.
-    private func MoveSprite(
-        _ xDistination: Int,
-        _ yDistination: Int,
-        _ travelTime: Double)
-    {
-        
-    }
-
     // Move existing sprite in place.
-    private func MoveSprite(sprite: PssstSprite)
+    private func MoveSprite(_ sprite: PssstSprite)
     {
         let frames = SKAction.animate(with: sprite.atlas, timePerFrame: 0.5 / Double(sprite.atlas.count))
         let action = SKAction.repeatForever(frames)
         sprite.run(action)
     }
 
-    // Move existing sprite in place.
-    private func MoveSpriteTo(
+    // Move existing sprite to new place.
+    private func MoveSpriteAround(
         _ sprite: PssstSprite,
-        _ newX: Int,
-        _ newY: Int)
+        _ newMoves: [Move])
     {
-        let newPoint = CGPoint(x: CGFloat(newX), y: CGFloat(newY))
-        let action = SKAction.move(to: newPoint, duration: 5.0)
-        sprite.run(action)
+        var actions = [SKAction]()
+        for newMove in newMoves
+        {
+            let action = SKAction.move(to: newMove.Point, duration: newMove.duration)
+            actions.append(action)
+        }
+        let actionSequence = SKAction.sequence(actions)
+        sprite.run(actionSequence)
     }
-
+    
     // Remove existing sprite.
     private func RemoveSprite(_ name : String)
     {
@@ -252,34 +467,9 @@ class PssstScene : SKScene
         return true
     }
     
-    // On touch began for 1..N fingers.
-    private func OnTouchesBegan(_ touch: UITouch)
-    {
-//        let location = touch.location(in: self)
-//        
-//        Util.Log("Begin location = (\(location.x), \(location.y))")
-    }
-    // On touch has moved for 1..N fingers.
-    private func OnTouchesMoved(_ touch: UITouch)
-    {
-//        let location = touch.location(in: self)
-//        
-//        Util.Log("Moved location = (\(location.x), \(location.y))")
-    }
-    // On touch has ended for 1..N fingers.
-    private func OnTouchesEnded(_ touch: UITouch)
-    {
-//        let location = touch.location(in: self)
-//        
-//        Util.Log("End location = (\(location.x), \(location.y))")
-    }
-    // On touch has cancelled for 1..N fingers.
-    private func OnTouchesCancelled(_ touch: UITouch)
-    {
-//        let location = touch.location(in: self)
-//        
-//        Util.Log("Cancel location = (\(location.x), \(location.y))")
-    }
+    /****************************************
+     * Helper methods.                      *
+     ****************************************/
     
 }
 

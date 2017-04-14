@@ -72,24 +72,20 @@ class OnePerSecondTimer
 
 class NSecondsTimer
 {
-    fileprivate var timer = Timer()
-    fileprivate var handler: (Int) -> ()
+    var timer = Timer()
+    var handler: (Int) -> ()
     
-    fileprivate var timeout = TimeInterval(1)
-    fileprivate var tickCount: Int = 0
+    var timeout = TimeInterval(1)
+    var tickCount: Int = 0
     
    /****************************************
     * Init.                                *
     ****************************************/
     
-    init(timeout: Int, handler: (Int) -> ())
+    init(_ timeout: Int, _ handler: @escaping (Int) -> ())
     {
         self.timeout = TimeInterval(timeout)
-        // self.handler = handler FIX LATER
-        let dummyHandler = {(arg: Int) -> Void in
-            // NOP
-        }
-        self.handler = dummyHandler
+        self.handler = handler
     }
     
     deinit
