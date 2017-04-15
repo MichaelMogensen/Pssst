@@ -12,16 +12,40 @@
 		1E42D5611E9DB38800DE20EC /* PssstScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E42D55F1E9DB38800DE20EC /* PssstScreen.swift */; };
 		1E42D5631E9E375F00DE20EC /* PssstAnimals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E42D5621E9E375F00DE20EC /* PssstAnimals.swift */; };
 		1E42D5651E9E5E4E00DE20EC /* PssstSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E42D5641E9E5E4E00DE20EC /* PssstSprite.swift */; };
-		8D42CFF51EA0E916001E38A1 /* WormBlue.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8D42CFF41EA0E916001E38A1 /* WormBlue.atlas */; };
 		8D42CFF91EA0E9AB001E38A1 /* WormRed.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8D42CFF81EA0E9AB001E38A1 /* WormRed.atlas */; };
 		8D42CFFD1EA0EA43001E38A1 /* WormYellow.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8D42CFFC1EA0EA43001E38A1 /* WormYellow.atlas */; };
 		8D42CFFF1EA0EE5E001E38A1 /* PssstSides.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D42CFFE1EA0EE5E001E38A1 /* PssstSides.swift */; };
 		8D42D0011EA0F965001E38A1 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D42D0001EA0F965001E38A1 /* Point.swift */; };
+		8D5A4B6D1EA2240E00F2D0A6 /* 173430-pssst-zx-spectrum-screenshot-main-menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D5A4B571EA2240E00F2D0A6 /* 173430-pssst-zx-spectrum-screenshot-main-menu.png */; };
+		8D5A4B6E1EA2240E00F2D0A6 /* 173431-pssst-zx-spectrum-screenshot-game-start.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D5A4B581EA2240E00F2D0A6 /* 173431-pssst-zx-spectrum-screenshot-game-start.png */; };
+		8D5A4B6F1EA2240E00F2D0A6 /* 173432-pssst-zx-spectrum-screenshot-the-blue-canister-is-all-you.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D5A4B591EA2240E00F2D0A6 /* 173432-pssst-zx-spectrum-screenshot-the-blue-canister-is-all-you.png */; };
+		8D5A4B701EA2240E00F2D0A6 /* 173433-pssst-zx-spectrum-screenshot-leaves-blossoming-nicely.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D5A4B5A1EA2240E00F2D0A6 /* 173433-pssst-zx-spectrum-screenshot-leaves-blossoming-nicely.png */; };
+		8D5A4B711EA2240E00F2D0A6 /* 173434-pssst-zx-spectrum-screenshot-and-the-full-plant-soon-follows.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D5A4B5B1EA2240E00F2D0A6 /* 173434-pssst-zx-spectrum-screenshot-and-the-full-plant-soon-follows.png */; };
+		8D5A4B721EA2240E00F2D0A6 /* 173435-pssst-zx-spectrum-screenshot-onto-level-2-which-has-diagonally.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D5A4B5C1EA2240E00F2D0A6 /* 173435-pssst-zx-spectrum-screenshot-onto-level-2-which-has-diagonally.png */; };
+		8D5A4B731EA2240E00F2D0A6 /* 173436-pssst-zx-spectrum-screenshot-this-happens-if-they-get-the.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D5A4B5D1EA2240E00F2D0A6 /* 173436-pssst-zx-spectrum-screenshot-this-happens-if-they-get-the.png */; };
+		8D5A4B741EA2240E00F2D0A6 /* 173437-pssst-zx-spectrum-screenshot-level-3-adds-insectoid-nasties.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D5A4B5E1EA2240E00F2D0A6 /* 173437-pssst-zx-spectrum-screenshot-level-3-adds-insectoid-nasties.png */; };
+		8D5A4B751EA2240E00F2D0A6 /* 173438-pssst-zx-spectrum-screenshot-stop-that-blue-one-before-it.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D5A4B5F1EA2240E00F2D0A6 /* 173438-pssst-zx-spectrum-screenshot-stop-that-blue-one-before-it.png */; };
+		8D5A4B761EA2240E00F2D0A6 /* 811939-pssst-zx-spectrum-screenshot-for-those-of-you-that-weren-t.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D5A4B601EA2240E00F2D0A6 /* 811939-pssst-zx-spectrum-screenshot-for-those-of-you-that-weren-t.png */; };
+		8D5A4B771EA2240E00F2D0A6 /* 811940-pssst-zx-spectrum-screenshot-each-repellent-has-a-specific.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D5A4B611EA2240E00F2D0A6 /* 811940-pssst-zx-spectrum-screenshot-each-repellent-has-a-specific.png */; };
+		8D5A4B781EA2240E00F2D0A6 /* 811941-pssst-zx-spectrum-screenshot-the-yellow-one-sprays-poisonous.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D5A4B621EA2240E00F2D0A6 /* 811941-pssst-zx-spectrum-screenshot-the-yellow-one-sprays-poisonous.png */; };
+		8D5A4B791EA2240E00F2D0A6 /* 811942-pssst-zx-spectrum-screenshot-i-like-this-one-what-can-i-say.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D5A4B631EA2240E00F2D0A6 /* 811942-pssst-zx-spectrum-screenshot-i-like-this-one-what-can-i-say.png */; };
+		8D5A4B7A1EA2240E00F2D0A6 /* 811943-pssst-zx-spectrum-screenshot-and-finally-the-cyan-can-which.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D5A4B641EA2240E00F2D0A6 /* 811943-pssst-zx-spectrum-screenshot-and-finally-the-cyan-can-which.png */; };
+		8D5A4B7B1EA2240E00F2D0A6 /* 811944-pssst-zx-spectrum-screenshot-the-blossom-of-the-sunflower.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D5A4B651EA2240E00F2D0A6 /* 811944-pssst-zx-spectrum-screenshot-the-blossom-of-the-sunflower.png */; };
+		8D5A4B7C1EA2240E00F2D0A6 /* 811945-pssst-zx-spectrum-screenshot-tough-fight-back-to-the-movie.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D5A4B661EA2240E00F2D0A6 /* 811945-pssst-zx-spectrum-screenshot-tough-fight-back-to-the-movie.png */; };
+		8D5A4B7D1EA2240E00F2D0A6 /* 811946-pssst-zx-spectrum-screenshot-it-was-a-tremendous-satisfaction.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D5A4B671EA2240E00F2D0A6 /* 811946-pssst-zx-spectrum-screenshot-it-was-a-tremendous-satisfaction.png */; };
+		8D5A4B7E1EA2240E00F2D0A6 /* 811947-pssst-zx-spectrum-screenshot-previous-screen-freezing-caterpillars.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D5A4B681EA2240E00F2D0A6 /* 811947-pssst-zx-spectrum-screenshot-previous-screen-freezing-caterpillars.png */; };
+		8D5A4B7F1EA2240E00F2D0A6 /* 811948-pssst-zx-spectrum-screenshot-freezing-the-wasp-group-with-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D5A4B691EA2240E00F2D0A6 /* 811948-pssst-zx-spectrum-screenshot-freezing-the-wasp-group-with-2.png */; };
+		8D5A4B801EA2240E00F2D0A6 /* 811948-pssst-zx-spectrum-screenshot-freezing-the-wasp-group-with.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D5A4B6A1EA2240E00F2D0A6 /* 811948-pssst-zx-spectrum-screenshot-freezing-the-wasp-group-with.png */; };
+		8D5A4B811EA2240E00F2D0A6 /* 811949-pssst-zx-spectrum-screenshot-being-destroyed.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D5A4B6B1EA2240E00F2D0A6 /* 811949-pssst-zx-spectrum-screenshot-being-destroyed.png */; };
+		8D5A4B821EA2240E00F2D0A6 /* 811950-pssst-zx-spectrum-screenshot-photo-album-me-and-my-blossomed.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D5A4B6C1EA2240E00F2D0A6 /* 811950-pssst-zx-spectrum-screenshot-photo-album-me-and-my-blossomed.png */; };
+		8D5A4B861EA2264700F2D0A6 /* BonusBox.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8D5A4B851EA2264700F2D0A6 /* BonusBox.atlas */; };
 		8D7195D31E9A903200612BD8 /* Shelf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7195D21E9A903200612BD8 /* Shelf.swift */; };
 		8D7195D71E9B889A00612BD8 /* Misc.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8D7195D61E9B889A00612BD8 /* Misc.txt */; };
 		8DAAFB621E9F81BA008F9AB5 /* WormGreen.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8DAAFB611E9F81BA008F9AB5 /* WormGreen.atlas */; };
 		8DAAFB641E9FA9F5008F9AB5 /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAFB631E9FA9F5008F9AB5 /* Move.swift */; };
 		8DAAFB681E9FDFE2008F9AB5 /* PssstColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAFB671E9FDFE2008F9AB5 /* PssstColors.swift */; };
+		8DAE995A1EA229F400C5DE00 /* WormCyan.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8DAE99591EA229F400C5DE00 /* WormCyan.atlas */; };
+		8DAE995C1EA22E7A00C5DE00 /* PssstRandomness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAE995B1EA22E7A00C5DE00 /* PssstRandomness.swift */; };
 		8DEE79181E97C5820010A81D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE79171E97C5820010A81D /* AppDelegate.swift */; };
 		8DEE79231E97C5820010A81D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DEE79211E97C5820010A81D /* Main.storyboard */; };
 		8DEE79251E97C5820010A81D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DEE79241E97C5820010A81D /* Assets.xcassets */; };
@@ -41,16 +65,40 @@
 		1E42D55F1E9DB38800DE20EC /* PssstScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PssstScreen.swift; path = Game/PssstScreen.swift; sourceTree = "<group>"; };
 		1E42D5621E9E375F00DE20EC /* PssstAnimals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PssstAnimals.swift; path = Game/PssstAnimals.swift; sourceTree = "<group>"; };
 		1E42D5641E9E5E4E00DE20EC /* PssstSprite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PssstSprite.swift; path = Game/PssstSprite.swift; sourceTree = "<group>"; };
-		8D42CFF41EA0E916001E38A1 /* WormBlue.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = WormBlue.atlas; sourceTree = "<group>"; };
 		8D42CFF81EA0E9AB001E38A1 /* WormRed.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = WormRed.atlas; sourceTree = "<group>"; };
 		8D42CFFC1EA0EA43001E38A1 /* WormYellow.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = WormYellow.atlas; sourceTree = "<group>"; };
 		8D42CFFE1EA0EE5E001E38A1 /* PssstSides.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PssstSides.swift; sourceTree = "<group>"; };
 		8D42D0001EA0F965001E38A1 /* Point.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Point.swift; path = Utils/Point.swift; sourceTree = "<group>"; };
+		8D5A4B571EA2240E00F2D0A6 /* 173430-pssst-zx-spectrum-screenshot-main-menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "173430-pssst-zx-spectrum-screenshot-main-menu.png"; sourceTree = "<group>"; };
+		8D5A4B581EA2240E00F2D0A6 /* 173431-pssst-zx-spectrum-screenshot-game-start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "173431-pssst-zx-spectrum-screenshot-game-start.png"; sourceTree = "<group>"; };
+		8D5A4B591EA2240E00F2D0A6 /* 173432-pssst-zx-spectrum-screenshot-the-blue-canister-is-all-you.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "173432-pssst-zx-spectrum-screenshot-the-blue-canister-is-all-you.png"; sourceTree = "<group>"; };
+		8D5A4B5A1EA2240E00F2D0A6 /* 173433-pssst-zx-spectrum-screenshot-leaves-blossoming-nicely.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "173433-pssst-zx-spectrum-screenshot-leaves-blossoming-nicely.png"; sourceTree = "<group>"; };
+		8D5A4B5B1EA2240E00F2D0A6 /* 173434-pssst-zx-spectrum-screenshot-and-the-full-plant-soon-follows.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "173434-pssst-zx-spectrum-screenshot-and-the-full-plant-soon-follows.png"; sourceTree = "<group>"; };
+		8D5A4B5C1EA2240E00F2D0A6 /* 173435-pssst-zx-spectrum-screenshot-onto-level-2-which-has-diagonally.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "173435-pssst-zx-spectrum-screenshot-onto-level-2-which-has-diagonally.png"; sourceTree = "<group>"; };
+		8D5A4B5D1EA2240E00F2D0A6 /* 173436-pssst-zx-spectrum-screenshot-this-happens-if-they-get-the.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "173436-pssst-zx-spectrum-screenshot-this-happens-if-they-get-the.png"; sourceTree = "<group>"; };
+		8D5A4B5E1EA2240E00F2D0A6 /* 173437-pssst-zx-spectrum-screenshot-level-3-adds-insectoid-nasties.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "173437-pssst-zx-spectrum-screenshot-level-3-adds-insectoid-nasties.png"; sourceTree = "<group>"; };
+		8D5A4B5F1EA2240E00F2D0A6 /* 173438-pssst-zx-spectrum-screenshot-stop-that-blue-one-before-it.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "173438-pssst-zx-spectrum-screenshot-stop-that-blue-one-before-it.png"; sourceTree = "<group>"; };
+		8D5A4B601EA2240E00F2D0A6 /* 811939-pssst-zx-spectrum-screenshot-for-those-of-you-that-weren-t.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "811939-pssst-zx-spectrum-screenshot-for-those-of-you-that-weren-t.png"; sourceTree = "<group>"; };
+		8D5A4B611EA2240E00F2D0A6 /* 811940-pssst-zx-spectrum-screenshot-each-repellent-has-a-specific.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "811940-pssst-zx-spectrum-screenshot-each-repellent-has-a-specific.png"; sourceTree = "<group>"; };
+		8D5A4B621EA2240E00F2D0A6 /* 811941-pssst-zx-spectrum-screenshot-the-yellow-one-sprays-poisonous.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "811941-pssst-zx-spectrum-screenshot-the-yellow-one-sprays-poisonous.png"; sourceTree = "<group>"; };
+		8D5A4B631EA2240E00F2D0A6 /* 811942-pssst-zx-spectrum-screenshot-i-like-this-one-what-can-i-say.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "811942-pssst-zx-spectrum-screenshot-i-like-this-one-what-can-i-say.png"; sourceTree = "<group>"; };
+		8D5A4B641EA2240E00F2D0A6 /* 811943-pssst-zx-spectrum-screenshot-and-finally-the-cyan-can-which.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "811943-pssst-zx-spectrum-screenshot-and-finally-the-cyan-can-which.png"; sourceTree = "<group>"; };
+		8D5A4B651EA2240E00F2D0A6 /* 811944-pssst-zx-spectrum-screenshot-the-blossom-of-the-sunflower.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "811944-pssst-zx-spectrum-screenshot-the-blossom-of-the-sunflower.png"; sourceTree = "<group>"; };
+		8D5A4B661EA2240E00F2D0A6 /* 811945-pssst-zx-spectrum-screenshot-tough-fight-back-to-the-movie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "811945-pssst-zx-spectrum-screenshot-tough-fight-back-to-the-movie.png"; sourceTree = "<group>"; };
+		8D5A4B671EA2240E00F2D0A6 /* 811946-pssst-zx-spectrum-screenshot-it-was-a-tremendous-satisfaction.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "811946-pssst-zx-spectrum-screenshot-it-was-a-tremendous-satisfaction.png"; sourceTree = "<group>"; };
+		8D5A4B681EA2240E00F2D0A6 /* 811947-pssst-zx-spectrum-screenshot-previous-screen-freezing-caterpillars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "811947-pssst-zx-spectrum-screenshot-previous-screen-freezing-caterpillars.png"; sourceTree = "<group>"; };
+		8D5A4B691EA2240E00F2D0A6 /* 811948-pssst-zx-spectrum-screenshot-freezing-the-wasp-group-with-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "811948-pssst-zx-spectrum-screenshot-freezing-the-wasp-group-with-2.png"; sourceTree = "<group>"; };
+		8D5A4B6A1EA2240E00F2D0A6 /* 811948-pssst-zx-spectrum-screenshot-freezing-the-wasp-group-with.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "811948-pssst-zx-spectrum-screenshot-freezing-the-wasp-group-with.png"; sourceTree = "<group>"; };
+		8D5A4B6B1EA2240E00F2D0A6 /* 811949-pssst-zx-spectrum-screenshot-being-destroyed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "811949-pssst-zx-spectrum-screenshot-being-destroyed.png"; sourceTree = "<group>"; };
+		8D5A4B6C1EA2240E00F2D0A6 /* 811950-pssst-zx-spectrum-screenshot-photo-album-me-and-my-blossomed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "811950-pssst-zx-spectrum-screenshot-photo-album-me-and-my-blossomed.png"; sourceTree = "<group>"; };
+		8D5A4B851EA2264700F2D0A6 /* BonusBox.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = BonusBox.atlas; sourceTree = "<group>"; };
 		8D7195D21E9A903200612BD8 /* Shelf.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shelf.swift; sourceTree = "<group>"; };
 		8D7195D61E9B889A00612BD8 /* Misc.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Misc.txt; sourceTree = "<group>"; };
 		8DAAFB611E9F81BA008F9AB5 /* WormGreen.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = WormGreen.atlas; path = Pssst/Animations/Worm/WormGreen.atlas; sourceTree = "<group>"; };
 		8DAAFB631E9FA9F5008F9AB5 /* Move.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
 		8DAAFB671E9FDFE2008F9AB5 /* PssstColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PssstColors.swift; path = Game/PssstColors.swift; sourceTree = "<group>"; };
+		8DAE99591EA229F400C5DE00 /* WormCyan.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = WormCyan.atlas; sourceTree = "<group>"; };
+		8DAE995B1EA22E7A00C5DE00 /* PssstRandomness.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PssstRandomness.swift; sourceTree = "<group>"; };
 		8DEE79141E97C5820010A81D /* Pssst.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pssst.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DEE79171E97C5820010A81D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DEE79221E97C5820010A81D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -77,13 +125,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D5A4B561EA2240E00F2D0A6 /* Original game screens from 1983 */ = {
+			isa = PBXGroup;
+			children = (
+				8D5A4B571EA2240E00F2D0A6 /* 173430-pssst-zx-spectrum-screenshot-main-menu.png */,
+				8D5A4B581EA2240E00F2D0A6 /* 173431-pssst-zx-spectrum-screenshot-game-start.png */,
+				8D5A4B591EA2240E00F2D0A6 /* 173432-pssst-zx-spectrum-screenshot-the-blue-canister-is-all-you.png */,
+				8D5A4B5A1EA2240E00F2D0A6 /* 173433-pssst-zx-spectrum-screenshot-leaves-blossoming-nicely.png */,
+				8D5A4B5B1EA2240E00F2D0A6 /* 173434-pssst-zx-spectrum-screenshot-and-the-full-plant-soon-follows.png */,
+				8D5A4B5C1EA2240E00F2D0A6 /* 173435-pssst-zx-spectrum-screenshot-onto-level-2-which-has-diagonally.png */,
+				8D5A4B5D1EA2240E00F2D0A6 /* 173436-pssst-zx-spectrum-screenshot-this-happens-if-they-get-the.png */,
+				8D5A4B5E1EA2240E00F2D0A6 /* 173437-pssst-zx-spectrum-screenshot-level-3-adds-insectoid-nasties.png */,
+				8D5A4B5F1EA2240E00F2D0A6 /* 173438-pssst-zx-spectrum-screenshot-stop-that-blue-one-before-it.png */,
+				8D5A4B601EA2240E00F2D0A6 /* 811939-pssst-zx-spectrum-screenshot-for-those-of-you-that-weren-t.png */,
+				8D5A4B611EA2240E00F2D0A6 /* 811940-pssst-zx-spectrum-screenshot-each-repellent-has-a-specific.png */,
+				8D5A4B621EA2240E00F2D0A6 /* 811941-pssst-zx-spectrum-screenshot-the-yellow-one-sprays-poisonous.png */,
+				8D5A4B631EA2240E00F2D0A6 /* 811942-pssst-zx-spectrum-screenshot-i-like-this-one-what-can-i-say.png */,
+				8D5A4B641EA2240E00F2D0A6 /* 811943-pssst-zx-spectrum-screenshot-and-finally-the-cyan-can-which.png */,
+				8D5A4B651EA2240E00F2D0A6 /* 811944-pssst-zx-spectrum-screenshot-the-blossom-of-the-sunflower.png */,
+				8D5A4B661EA2240E00F2D0A6 /* 811945-pssst-zx-spectrum-screenshot-tough-fight-back-to-the-movie.png */,
+				8D5A4B671EA2240E00F2D0A6 /* 811946-pssst-zx-spectrum-screenshot-it-was-a-tremendous-satisfaction.png */,
+				8D5A4B681EA2240E00F2D0A6 /* 811947-pssst-zx-spectrum-screenshot-previous-screen-freezing-caterpillars.png */,
+				8D5A4B691EA2240E00F2D0A6 /* 811948-pssst-zx-spectrum-screenshot-freezing-the-wasp-group-with-2.png */,
+				8D5A4B6A1EA2240E00F2D0A6 /* 811948-pssst-zx-spectrum-screenshot-freezing-the-wasp-group-with.png */,
+				8D5A4B6B1EA2240E00F2D0A6 /* 811949-pssst-zx-spectrum-screenshot-being-destroyed.png */,
+				8D5A4B6C1EA2240E00F2D0A6 /* 811950-pssst-zx-spectrum-screenshot-photo-album-me-and-my-blossomed.png */,
+			);
+			path = "Original game screens from 1983";
+			sourceTree = "<group>";
+		};
 		8DEE790B1E97C5820010A81D = {
 			isa = PBXGroup;
 			children = (
-				8D42CFF41EA0E916001E38A1 /* WormBlue.atlas */,
+				8D5A4B851EA2264700F2D0A6 /* BonusBox.atlas */,
+				8DAE99591EA229F400C5DE00 /* WormCyan.atlas */,
 				8DAAFB611E9F81BA008F9AB5 /* WormGreen.atlas */,
 				8D42CFF81EA0E9AB001E38A1 /* WormRed.atlas */,
 				8D42CFFC1EA0EA43001E38A1 /* WormYellow.atlas */,
+				8D5A4B561EA2240E00F2D0A6 /* Original game screens from 1983 */,
 				8DEE79161E97C5820010A81D /* Pssst */,
 				8DEE79151E97C5820010A81D /* Products */,
 			);
@@ -132,6 +211,7 @@
 			children = (
 				1E42D5621E9E375F00DE20EC /* PssstAnimals.swift */,
 				8DAAFB671E9FDFE2008F9AB5 /* PssstColors.swift */,
+				8DAE995B1EA22E7A00C5DE00 /* PssstRandomness.swift */,
 				8D42CFFE1EA0EE5E001E38A1 /* PssstSides.swift */,
 				1E42D55F1E9DB38800DE20EC /* PssstScreen.swift */,
 				1E42D5641E9E5E4E00DE20EC /* PssstSprite.swift */,
@@ -211,15 +291,38 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D5A4B761EA2240E00F2D0A6 /* 811939-pssst-zx-spectrum-screenshot-for-those-of-you-that-weren-t.png in Resources */,
+				8DAE995A1EA229F400C5DE00 /* WormCyan.atlas in Resources */,
+				8D5A4B861EA2264700F2D0A6 /* BonusBox.atlas in Resources */,
 				8D42CFF91EA0E9AB001E38A1 /* WormRed.atlas in Resources */,
-				8D42CFF51EA0E916001E38A1 /* WormBlue.atlas in Resources */,
+				8D5A4B791EA2240E00F2D0A6 /* 811942-pssst-zx-spectrum-screenshot-i-like-this-one-what-can-i-say.png in Resources */,
+				8D5A4B731EA2240E00F2D0A6 /* 173436-pssst-zx-spectrum-screenshot-this-happens-if-they-get-the.png in Resources */,
+				8D5A4B6D1EA2240E00F2D0A6 /* 173430-pssst-zx-spectrum-screenshot-main-menu.png in Resources */,
+				8D5A4B821EA2240E00F2D0A6 /* 811950-pssst-zx-spectrum-screenshot-photo-album-me-and-my-blossomed.png in Resources */,
+				8D5A4B751EA2240E00F2D0A6 /* 173438-pssst-zx-spectrum-screenshot-stop-that-blue-one-before-it.png in Resources */,
+				8D5A4B7A1EA2240E00F2D0A6 /* 811943-pssst-zx-spectrum-screenshot-and-finally-the-cyan-can-which.png in Resources */,
+				8D5A4B711EA2240E00F2D0A6 /* 173434-pssst-zx-spectrum-screenshot-and-the-full-plant-soon-follows.png in Resources */,
+				8D5A4B771EA2240E00F2D0A6 /* 811940-pssst-zx-spectrum-screenshot-each-repellent-has-a-specific.png in Resources */,
+				8D5A4B801EA2240E00F2D0A6 /* 811948-pssst-zx-spectrum-screenshot-freezing-the-wasp-group-with.png in Resources */,
 				8DEE79231E97C5820010A81D /* Main.storyboard in Resources */,
 				8D42CFFD1EA0EA43001E38A1 /* WormYellow.atlas in Resources */,
 				8DEE79251E97C5820010A81D /* Assets.xcassets in Resources */,
+				8D5A4B7C1EA2240E00F2D0A6 /* 811945-pssst-zx-spectrum-screenshot-tough-fight-back-to-the-movie.png in Resources */,
+				8D5A4B7D1EA2240E00F2D0A6 /* 811946-pssst-zx-spectrum-screenshot-it-was-a-tremendous-satisfaction.png in Resources */,
+				8D5A4B741EA2240E00F2D0A6 /* 173437-pssst-zx-spectrum-screenshot-level-3-adds-insectoid-nasties.png in Resources */,
 				8D7195D71E9B889A00612BD8 /* Misc.txt in Resources */,
+				8D5A4B6E1EA2240E00F2D0A6 /* 173431-pssst-zx-spectrum-screenshot-game-start.png in Resources */,
 				8DEE79281E97C5820010A81D /* LaunchScreen.storyboard in Resources */,
+				8D5A4B811EA2240E00F2D0A6 /* 811949-pssst-zx-spectrum-screenshot-being-destroyed.png in Resources */,
+				8D5A4B7E1EA2240E00F2D0A6 /* 811947-pssst-zx-spectrum-screenshot-previous-screen-freezing-caterpillars.png in Resources */,
+				8D5A4B701EA2240E00F2D0A6 /* 173433-pssst-zx-spectrum-screenshot-leaves-blossoming-nicely.png in Resources */,
+				8D5A4B7B1EA2240E00F2D0A6 /* 811944-pssst-zx-spectrum-screenshot-the-blossom-of-the-sunflower.png in Resources */,
+				8D5A4B721EA2240E00F2D0A6 /* 173435-pssst-zx-spectrum-screenshot-onto-level-2-which-has-diagonally.png in Resources */,
+				8D5A4B781EA2240E00F2D0A6 /* 811941-pssst-zx-spectrum-screenshot-the-yellow-one-sprays-poisonous.png in Resources */,
+				8D5A4B6F1EA2240E00F2D0A6 /* 173432-pssst-zx-spectrum-screenshot-the-blue-canister-is-all-you.png in Resources */,
 				8DAAFB621E9F81BA008F9AB5 /* WormGreen.atlas in Resources */,
 				1E2233F91E9DA30D00ED81CF /* Crab.txt in Resources */,
+				8D5A4B7F1EA2240E00F2D0A6 /* 811948-pssst-zx-spectrum-screenshot-freezing-the-wasp-group-with-2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +338,7 @@
 				1E42D5651E9E5E4E00DE20EC /* PssstSprite.swift in Sources */,
 				8DEE797C1E9915190010A81D /* MathHelper.swift in Sources */,
 				8DEE79961E991B610010A81D /* PssstViewController.swift in Sources */,
+				8DAE995C1EA22E7A00C5DE00 /* PssstRandomness.swift in Sources */,
 				1E42D5631E9E375F00DE20EC /* PssstAnimals.swift in Sources */,
 				8DEE79901E9918790010A81D /* Util.swift in Sources */,
 				8D42D0011EA0F965001E38A1 /* Point.swift in Sources */,

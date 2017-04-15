@@ -12,16 +12,20 @@ enum EPssstColors : Int
 {
     case
         Blue = 0,
-        Green = 1,
-        Red = 2,
-        Yellow = 3
+        Cyan = 1,
+        Green = 2,
+        Magenta = 3,
+        Red = 4,
+        Yellow = 5
     
     var Name : String
     {
         switch self
         {
             case .Blue: return "Blue"
+            case .Cyan: return "Cyan"
             case .Green: return "Green"
+            case .Magenta: return "Magenta"
             case .Red: return "Red"
             case .Yellow: return "Yellow"
         }

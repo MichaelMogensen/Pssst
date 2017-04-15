@@ -17,38 +17,47 @@ class RandomNumbers
         var max_ = max
         if (min_ > max_)
         { MathHelper.Swop(&min_, &max_) }
+
         var value = max_ - min_ + 1
         value = value >= 0 ? value : 0
         let random = min_ + Int(arc4random_uniform(UInt32(value)))
         
         return random
     }
+    
     // Return random int in [min; max].
-    class func RandomIntEvenSpaced(_ min: Int, max: Int, neighbourValues: [Int], minDistance: Int) -> Int
+    class func RandomIntWithSpace(_ min: Int, _ max: Int, _ values: [Int]?, _ minDistAcceptable: Int) -> Int
     {
-        func isAtSafeDisttanceFromAllItsNeighbours(_ value: Int, neighbourValues: [Int], minDistance: Int) -> Bool
+        if let values_ = values
         {
-            for neighbourValue in neighbourValues
+            if (values_.isEmpty)
             {
-                if abs(value - neighbourValue) < minDistance
-                { return false }
+                return RandomInt(min, max)
             }
-            return true
+            
+            repeat
+            {
+                let candidate = RandomInt(min, max)
+                
+                var minDiff = Int.max
+                for value in values_
+                {
+                    let diff = abs(value - candidate)
+                    if (diff < minDiff)
+                    { minDiff = diff }
+                }
+                
+                if (minDiff >= minDistAcceptable)
+                { return candidate }
+            }
+            while(true)
         }
-        
-        var attempts = 50
-        var newRandomInt: Int
-        repeat
+        else
         {
-            newRandomInt = RandomNumbers.RandomInt(min, max)
-            attempts -= 1
-            if attempts == 0
-            { return newRandomInt }
+            return RandomInt(min, max)
         }
-        while (!isAtSafeDisttanceFromAllItsNeighbours(newRandomInt, neighbourValues: neighbourValues, minDistance: minDistance))
-        
-        return newRandomInt
     }
+    
     // Return n different random int's in [min; max].
     class func RandomDifferentInts(_ numberOfDifferentRandomNumbers: Int, _ min: Int, _ max: Int) -> [Int]!
     {
@@ -84,20 +93,6 @@ class RandomNumbers
         }
         
         return differentRandomNumbers
-    }
-    // Return 0 or 1 in 50% chance.
-    class func FiftyFifty() -> Bool
-    {
-        let diceWith2Sides = RandomInt(0, 100)
-        
-        return diceWith2Sides > 50
-    }
-    // Return [0; 5] in 100/6% chance.
-    class func RollDice() -> Int
-    {
-        let diceWith6Sides = RandomInt(0, 5)
-        
-        return diceWith6Sides
     }
 }
 

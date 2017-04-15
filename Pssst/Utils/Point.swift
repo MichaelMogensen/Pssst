@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SpriteKit
 
 class Point
 {
@@ -22,6 +23,11 @@ class Point
     {
         self.x = x
         self.y = y
+    }
+    init(_ p: CGPoint)
+    {
+        self.x = Int(p.x)
+        self.y = Int(p.y)
     }
 }
 

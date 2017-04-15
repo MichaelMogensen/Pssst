@@ -12,14 +12,17 @@ enum EPssstSides : Int
 {
     case
         Left = 0,
-        Right = 1
-    
+        Right = 1,
+        Top = 2,
+        Bottom = 3
     var Name : String
     {
         switch self
         {
             case .Left: return "Left"
             case .Right: return "Right"
+            case .Top: return "Top"
+            case .Bottom: return "Bottom"
         }
     }
     

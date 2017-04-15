@@ -41,19 +41,19 @@ class PssstScene : SKScene
      * Basic static properties              *
      ****************************************/
     
-    static private let levelLims =
+    static private let LevelLims =
     [
-        LevelLim(level: 1, animal: EPssstAnimals.Worm,   min: 3, max: 10),
+        LevelLim(level: 1, animal: EPssstAnimals.Worm,   min: 3, max: 7),
         LevelLim(level: 1, animal: EPssstAnimals.Duster, min: 0, max: 0),
         LevelLim(level: 1, animal: EPssstAnimals.Bee,    min: 0, max: 0),
         
-        LevelLim(level: 2, animal: EPssstAnimals.Worm,   min: 3, max: 20),
-        LevelLim(level: 2, animal: EPssstAnimals.Duster, min: 3, max: 6),
+        LevelLim(level: 2, animal: EPssstAnimals.Worm,   min: 3, max: 14),
+        LevelLim(level: 2, animal: EPssstAnimals.Duster, min: 3, max: 7),
         LevelLim(level: 2, animal: EPssstAnimals.Bee,    min: 0, max: 0),
         
-        LevelLim(level: 3, animal: EPssstAnimals.Worm,   min: 3, max: 30),
-        LevelLim(level: 3, animal: EPssstAnimals.Duster, min: 3, max: 6),
-        LevelLim(level: 3, animal: EPssstAnimals.Bee,    min: 3, max: 6)
+        LevelLim(level: 3, animal: EPssstAnimals.Worm,   min: 3, max: 21),
+        LevelLim(level: 3, animal: EPssstAnimals.Duster, min: 3, max: 14),
+        LevelLim(level: 3, animal: EPssstAnimals.Bee,    min: 3, max: 7)
     ]
 
     /****************************************
@@ -66,6 +66,7 @@ class PssstScene : SKScene
     private var Timer: NSecondsTimer?
     private var Level = 1
     private var Lives = 3
+    private var Time: TimeInterval?
     
     /****************************************
      * Init.                                *
@@ -80,7 +81,6 @@ class PssstScene : SKScene
         //self.Timer = nil
         self.Timer = NSecondsTimer(1, OnTimeout)
         
-        BeginGame()
     }
     required init?(coder aDecoder: NSCoder)
     {
@@ -91,12 +91,12 @@ class PssstScene : SKScene
     {
         EndGame()
     }
-
+    
     /****************************************
      * Debug methods.                       *
      ****************************************/
 
-    func PrintAllAnimals()
+    func PrintAllSprites()
     {
         let animals = "..."
         
@@ -115,7 +115,7 @@ class PssstScene : SKScene
         Lives = 3
         CleanScene()
         PlaceSprayCans()
-        StartTimer()
+        //StartTimer()
     }
 
     // Continue game.
@@ -138,62 +138,41 @@ class PssstScene : SKScene
      * Event handlers.                      *
      ****************************************/
     
+    // Ready.
     override func didMove(to view: SKView)
     {
+        BeginGame()
     }
+    
     // Called before each frame is rendered.
-    override func update(_ currentTime: TimeInterval)
+    override func update(_ time: TimeInterval)
     {
-//        Util.Log("Time = (\(currentTime))")
+        if let t = self.Time
+        {
+            let diff = time - t
+            if (diff > 1.0)
+            {
+                self.Time = time
+                BringInTheAnimals()
+            }
+        }
+        else
+        {
+            BringInTheAnimals()
+            self.Time = time
+        }
     }
 
     /****************************************
      * Calc. methods.                       *
      ****************************************/
 
-    private func SelectRandomColor() -> EPssstColors
-    {
-        let randomNumber = RandomNumbers.RandomInt(0, EPssstColors.count - 1)
-        return EPssstColors(rawValue: randomNumber)!
-    }
+//    private func SelectRandomColor() -> EPssstColors
+//    {
+//        let randomNumber = RandomNumbers.RandomInt(0, EPssstColors.count - 1)
+//        return EPssstColors(rawValue: randomNumber)!
+//    }
 
-    private func SelectRandomSide() -> EPssstSides
-    {
-        let randomNumber = RandomNumbers.RandomInt(0, EPssstSides.count - 1)
-        return EPssstSides(rawValue: randomNumber)!
-    }
-    
-    private func SelectRandomSidePoint(side: EPssstSides) -> Point
-    {
-        let randomPoint = Point()
-        
-        let gameBox = (self.Screen?.GameBox)!
-        randomPoint.x = (side == EPssstSides.Left ?
-            self.Screen?.GameBox.left :
-            self.Screen?.GameBox.right)!
-        randomPoint.y = RandomNumbers.RandomInt(
-            gameBox.bottom,
-            gameBox.top)
-        
-        return randomPoint
-    }
-    
-    private func SelectRandomZigZigPath(
-        _ from: Point,
-        _ to: Point,
-        _ durationPerMove: TimeInterval) -> [Move]
-    {
-        let path =
-        [
-            Move(RandomNumbers.RandomInt(100, 200), RandomNumbers.RandomInt(100,200), 10.0)
-//            Move(100, 200, 2.0),
-//            Move(200, 200, 1.0),
-//            Move(200, 100, 2.0),
-//            Move(100, 100, 1.0)
-        ]
-        return path
-    }
-    
     /****************************************
      * Game logic methods.                  *
      ****************************************/
@@ -204,60 +183,67 @@ class PssstScene : SKScene
     }
 
     // Add some random bees.
-    private func AddBees(_ count: Int)
+    private func AddBees(_ animalData: (Int, [Int]?))
     {
-        if (count < 1)
+        if (animalData.0 < 1)
         { return }
     }
 
     // Add some random dusters.
-    private func AddDusters(_ count: Int)
+    private func AddDusters(_ animalData: (Int, [Int]?))
     {
-        if (count < 1)
+        if (animalData.0 < 1)
         { return }
     }
 
     // Add some random worms.
-    private func AddWorms(_ count: Int)
+    private func AddWorms(_ animalData: (Int, [Int]?))
     {
-        if (count < 1)
+        if (animalData.0 < 1)
         { return }
         
-        for _ in 1...count
+        for _ in 1...animalData.0
         {
-            let randomColor = SelectRandomColor()
-            let randomSide = SelectRandomSide()
-            let randomStartPoint = SelectRandomSidePoint(side: randomSide)
-            let randomZigZagPath = SelectRandomZigZigPath(Point(0, 0), Point(0, 0), 10.0)
+            let randomColor = PssstRandomness.SelectRandomWormColor()
+            let randomStartPoint = PssstRandomness.SelectRandomPointOnVerticalGameBoxSide(self.Screen!.GameBox, animalData.1)
+            let randomZigZagPath = PssstRandomness.SelectRandomZigZigPath(Point(0, 0), Point(0, 0), 10.0)
             
             let worm = AddSpriteAlive(EPssstAnimals.Worm, randomColor, randomStartPoint)
             MoveSprite(worm)
             MoveSpriteAround(worm, randomZigZagPath)
-            
-            Util.Log(randomStartPoint.y)
         }
     }
 
     // Bring in animals according to the level.
     private func BringInTheAnimals()
     {
-        let levelLimWorms = GetLevelLim(EPssstAnimals.Worm)!
-        let levelLimDusters = GetLevelLim(EPssstAnimals.Duster)!
-        let levelLimBees = GetLevelLim(EPssstAnimals.Bee)!
+        func AnimalData(_ animal: EPssstAnimals) -> (Int, [Int]?)
+        {
+            let levelLimAnimal = GetLevelLim(animal)!
+            let animals = GetAnimals(animal)!
+            let extra = animals.count < levelLimAnimal.min ? levelLimAnimal.min : animals.count < levelLimAnimal.max ? 1 : 0
+            let animalPositions = GetSpritePositions(animals)
+            
+            if (animalPositions == nil)
+            { return (extra, nil) }
+            
+            var animalYCoordinates = [Int]()
+            for animalPosition in animalPositions!
+            {
+                animalYCoordinates.append(animalPosition.y)
+            }
+            
+            return (extra, animalYCoordinates)
+        }
         
-        let wormCount = GetAnimalCount(EPssstAnimals.Worm)
-        let dusterCount = GetAnimalCount(EPssstAnimals.Duster)
-        let beeCount = GetAnimalCount(EPssstAnimals.Bee)
-        
-        let newWorms = 1 //wormCount < levelLimWorms.min ? levelLimWorms.min : wormCount < levelLimWorms.max ? 1 : 0
-        let newDusters = dusterCount < levelLimDusters.min ? levelLimDusters.min : dusterCount < levelLimDusters.max ? 1 : 0
-        let newBees = beeCount < levelLimBees.min ? levelLimBees.min : beeCount < levelLimBees.max ? 1 : 0
-        
-        AddWorms(newWorms)
-        AddDusters(newDusters)
-        AddBees(newBees)
+        let wormData = AnimalData(EPssstAnimals.Worm)
+        AddWorms(wormData)
+        let dusterData = AnimalData(EPssstAnimals.Duster)
+        AddWorms(dusterData)
+        let beeData = AnimalData(EPssstAnimals.Bee)
+        AddWorms(beeData)
     }
-    
+
     // Wipe all.
     private func CleanScene()
     {
@@ -272,6 +258,14 @@ class PssstScene : SKScene
         self.Screen!.EmptyShelfs()
     }
 
+    // Return array of specific animal - like "Worm".
+    private func GetAnimals(_ animal: EPssstAnimals) -> [PssstSprite]?
+    {
+        let sprites = LookupSprites(animal.Name.description)
+        
+        return sprites
+    }
+    
     // Return count of specific animal - like "Worm".
     private func GetAnimalCount(_ animal: EPssstAnimals) -> Int
     {
@@ -287,7 +281,7 @@ class PssstScene : SKScene
     // Return level limits for level/animal.
     func GetLevelLim(_ animal: EPssstAnimals) -> LevelLim?
     {
-        for levelLim in PssstScene.levelLims
+        for levelLim in PssstScene.LevelLims
         {
             if (levelLim.level == self.Level && levelLim.animal == animal)
             { return levelLim }
@@ -345,7 +339,7 @@ class PssstScene : SKScene
         _ height: Int) -> PssstSprite
     {
         let sprite = nameImage == nil ? PssstSprite() : PssstSprite(imageNamed: nameImage!)
-        sprite.name = name
+        sprite.name = name // + GUID() for at gøre navnet unikt.
         sprite.position = CGPoint(
             x: x,
             y: y)
@@ -383,6 +377,21 @@ class PssstScene : SKScene
             name,
             nameAtlas,
             startPoint)
+    }
+    
+    // Return positions of sprites.
+    private func GetSpritePositions(_ sprites: [PssstSprite]?) -> [Point]?
+    {
+        if (sprites == nil)
+        { return nil }
+        
+        var positions = [Point]()
+        for sprite in sprites!
+        {
+            positions.append(Point(sprite.position))
+        }
+        
+        return positions
     }
     
     // Return texture array from atlas.
@@ -428,7 +437,7 @@ class PssstScene : SKScene
             }
             return false
         }
-        let spritesFound = children.filter(FindFromName) as! [PssstSprite]
+        let spritesFound = children.filter(FindFromName) as? [PssstSprite]
         
         return spritesFound
     }
