@@ -167,12 +167,6 @@ class PssstScene : SKScene
      * Calc. methods.                       *
      ****************************************/
 
-//    private func SelectRandomColor() -> EPssstColors
-//    {
-//        let randomNumber = RandomNumbers.RandomInt(0, EPssstColors.count - 1)
-//        return EPssstColors(rawValue: randomNumber)!
-//    }
-
     /****************************************
      * Game logic methods.                  *
      ****************************************/
